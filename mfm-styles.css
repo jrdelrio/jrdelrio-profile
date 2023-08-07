@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul a i{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/* --------------------- spinning image ------------ */
+.spin-picture .img, .spin-picture .commands {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+.commands{
+    text-align: center;
+}
+
+.spin-picture{
+    background: #001219ff;
+    padding-bottom: 30px;
+}
+.spin-picture p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+@keyframes girar {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.img img{
+    width: 25vw;
+    margin: 30px 35px 30px 10%;
+    animation: girar 10s linear infinite;
+    border-radius: 50%;
+}
+
+#speedControl {
+    direction: rtl;
+    -webkit-appearance: none; /* Quita el estilo por defecto en Chrome y Safari */
+    appearance: none;
+    background: white; /* Color de la barra */
+}
+
+/* ------------------ clocks -------------------- */
+
+.world-clocks {
+    background: #005f73ff;
+}
+
+.clock{
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.aux-1{
+    background: #0a9396ff;
+}
+
+.aux-2{
+    background: #94d2bdff;
+}
+
+.aux-3 {
+    background: #e9d8a6ff;
+}
+
+.aux-4{
+    background: #ee9b00ff;
+}
+
+.aux-5{
+    background: #ca6702ff;
+}

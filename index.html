@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jrdelrio Portfolio Website</title>
+    <link rel="icon" type="image/x-icon" href="./icons/jr-profile-favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Barlow+Condensed:wght@500&family=Barlow:wght@100&family=Bebas+Neue&family=Oswald&family=Roboto+Mono&family=Saira+Extra+Condensed:wght@500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo-jrdelrio.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="frikiMundo.html" class="frikiMundo">=My Frikimundo=</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text typing-text-container">
+                <p class="typing-text">Full-Stack Web Developer.</p>
+                <h1>Hi, I'm <span>José Raimundo</span><br> from Chile</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------about---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user-jrdelrio.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>👋 Hello,<br>
+                        I'm José Raimundo del Rio, fullstack web developer based in Barcelona with a love for creating
+                        remarkable digital experiences. From self-learning Python to embracing web development, I've
+                        found my true calling. Music has been my lifelong passion.<br>
+                        Professionalism, attention to detail, and reliability define my work ethic. I value transparent
+                        communication and collaborative relationships.
+                        I'm excited about opportunities to contribute with my skills and creativity. Let's connect and
+                        innovate together!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend Development</span><br>
+                                Designing Web/App interfaces</li>
+                            <li><span>Backend Development</span><br>
+                                Backend, SQL, APIs and databases</li>
+                            <li><span>Software Development</span><br>
+                                Building desktop Softwares</li>
+                            <li><span>Used technologies</span><br>
+                                <img src="icons/html-5.png" title="HTML5" alt="Html5" class="dev-tech"
+                                    style="height: 32px;" />
+                                <img src="icons/css-3.png" title="CSS3" alt="Css3" class="dev-tech"
+                                    style="height: 26px;" />
+                                <img src="icons/javascript.png" title="javaScript" alt="javaScript" class="dev-tech"
+                                    style="height: 26px;" />
+                                <img src="icons/git.png" title="git" alt="git" class="dev-tech" style="height: 26px;" />
+                                <img src="icons/github.png" title="github" alt="git" class="dev-tech"
+                                    style="height: 30px;" />
+                                <img src="icons/react.png" title="ReactJS" alt="ReactJS" class="dev-tech"
+                                    style="height: 26px;" />
+                                <img src="icons/python.png" title="Python" alt="Python" class="dev-tech"
+                                    style="height: 26px;" />
+                                <img src="icons/flask.png" title="Flask" alt="Flask" class="dev-tech"
+                                    style="height: 26px; background-color: rgb(160, 160, 160); border-radius: 50%; padding: 2px;" />
+                                <img src="icons/figma.png" title="Figma" alt="Figma" class="dev-tech"
+                                    style="height: 26px;" />
+                                <img src="icons/my-sql.png" title="MySQL" alt="MySQL" class="dev-tech"
+                                    style="height: 30px;" />
+                                <img src="icons/jest.png" title="Jest" alt="Jest" class="dev-tech"
+                                    style="height: 26px; background-color: rgb(160, 160, 160); border-radius: 20%; padding: 2px;" />
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br>
+                                4Geeks Academy | Teacher assistant </li>
+                            <li><span>2022 - 2023</span><br>
+                                4Geeks Academy | Official blog copywriter </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 | 4Geeks Academy</span><img src="./icons/4geeks.png"
+                                    class="education-icon"><br>
+                                <a href="./certificates/Certificado Full Stack Software Developer.pdf" download>
+                                    <img src="./icons/download-pdf.png" title="Download certificate" alt="Download"
+                                        class="download-icon" /></a>
+                                Graduated as Full Stack Developer
+                            </li>
+
+                            <li><span>2022 | Online courses</span><img src="./icons/coursera.png"
+                                    class="education-icon"><br>
+                                <a href="./certificates/Certificado Flask Project.pdf" download>
+                                    <img src="./icons/download-pdf.png" title="Download certificate" alt="Download"
+                                        class="download-icon" /></a>
+                                Create your first Web App with Python and Flask
+                            </li>
+
+                            <li><span>2022 | Wesleyan University</span><img src="./icons/wesleyan.png"
+                                    class="education-icon"><br>
+                                <a href="./certificates/Certificado Python Programming Wesleyan.pdf" download>
+                                    <img src="./icons/download-pdf.png" title="Download certificate" alt="Download"
+                                        class="download-icon" /></a>
+                                Python Programming: A Concise Introduction
+                            </li>
+
+                            <li><span>2022 | Master Mind Academy</span><img src="./icons/master-mind.png"
+                                    class="education-icon"><br>
+                                <a href="./certificates/Certificado MasterMind Python.pdf" download>
+                                    <img src="./icons/download-pdf.png" title="Download certificate" alt="Download"
+                                        class="download-icon" /></a>
+                                Aprende a programar con Python
+                            </li>
+
+                            <li><span>2021 - 2022 | Google WebMaster Academy</span><img src="./icons/google.png"
+                                    class="education-icon"><br>
+                                <a href="./certificates/Certificado Crush Course on Python GOOGLE.pdf" download>
+                                    <img src="./icons/download-pdf.png" title="Download certificate" alt="Download"
+                                        class="download-icon" /></a>
+                                Crash Course on Python<br>
+
+                                <a href="./certificates/Certificado Interacting with OS GOOGLE.pdf" download>
+                                    <img src="./icons/download-pdf.png" title="Download certificate" alt="Download"
+                                        class="download-icon" /></a>
+                                Using Python to Interact with the Operating System<br>
+
+                                <a href="./certificates/Certificado git and GitHub GOOGLE.pdf" download>
+                                    <img src="./icons/download-pdf.png" title="Download certificate" alt="Download"
+                                        class="download-icon" /></a>
+                                Introduction to Git and GitHub<br>
+
+                                <a href="./certificates/Certificado Debugging GOOGLE.pdf" download>
+                                    <img src="./icons/download-pdf.png" title="Download certificate" alt="Download"
+                                        class="download-icon" /></a>
+                                Troubleshooting and Debugging Techniques
+                            </li>
+                            <li><span>2020 | Pontificia Universidad Católica de Chile</span><img src="./icons/puc.png"
+                                    class="education-icon"><br>
+                                <a href="./certificates/Graduation Certificate.pdf" download>
+                                    <img src="./icons/download-pdf.png" title="Download certificate" alt="Download"
+                                        class="download-icon" /></a>
+                                Graduated as Civil Engineer in Construction
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------services---------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet
+                        sapien quis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet
+                        sapien quis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fab fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet
+                        sapien quis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------portfolio------------ -->
+    <!-- agregar un scroll-x -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you yo the talented people around the world. Download it from play store.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you yo the talented people around the world. Download it from play store.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you yo the talented people around the world. Download it from play store.
+                        </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-- ----------contact------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> jrdelriodom@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +34 683 34 05 72</p>
+                    <div class="social-icons">
+                        <a href="whatsapp://send?phone=34683340572" target="_blank"><i
+                                class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/jrdelriod" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://github.com/jrdelrio" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://medium.com/@jrdelriodom" target="_blank"><i class="fab fa-medium"></i></a>
+                        <a href="https://www.instagram.com/raidelrio.music/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/jose-raimundo-del-rio-domeyko/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Made wtih <i class="fas fa-heart"></i> by <a
+                    href="https://www.youtube.com/channel/UCkjoHfkLEy7ZT4bA2myJ8xA?sub_confirmation=1">José Raimundo del
+                    Rio - Fullstack Software Developer</a></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby3XbC_fQotPUpeDLVL-GOC3H_83ye20eeNYybnyrr4FB88_-uQoDKW-2iYZnrTb3mn/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>

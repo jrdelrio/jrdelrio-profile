@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mfm-styles.css">
+    <title>jrdelrio | FrikiMundo</title>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><i class="fa-solid fa-backward-step"></i><a href="index.html"> Back Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="spin-picture">
+        <div class="img">
+            <img id="imagenGiratoria" src="./images/avatar-circular.png" style="border: 10px solid white; " />
+        </div>
+        <p>¿Cuánto debe durar una vuelta?</p>
+        <div class="commands">
+            <div class="controls-1">
+                <span>10s</span>
+                <input id="speedControl" type="range" min="0.1" max="10" step="0.1" value="5" onchange="changeSpeed()">
+                <span>0.1s</span>
+            </div>
+            <div class="controls-2">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+                <i class="fa-regular fa-circle-pause"></i>
+                <i class="fa-solid fa-arrow-rotate-right"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="world-clocks">
+        <div class="container">
+            <div class="row">
+                <h2>World Clocks</h2>
+                <div class="clock" id="barcelona"></div>
+                <div class="clock" id="santiago"></div>
+                <div class="clock" id="berlin"></div>
+                <div class="clock" id="londres"></div>
+                <div class="clock" id="tokio"></div>
+                <div class="clock" id="san_francisco"></div>
+                <div class="clock" id="sidney"></div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                Do you need to know some other location time?<br />
+                Select a country:
+                <select id="country" name="country">
+                </select>
+
+                <div class="modal-dialog modal-dialog-centered">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis voluptatum quaerat quos! Sed aliquid laboriosam nostrum nobis numquam maxime! Eligendi totam magni cumque consequuntur, eos voluptatum excepturi placeat minus nemo!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="aux-1">aux</div>
+    <div class="aux-2">aux</div>
+    <div class="aux-3">aux</div>
+    <div class="aux-4">aux</div>
+    <div class="aux-5">aux</div>
+
+    <script src="frikiMundo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+
+</html>
