@@ -17,7 +17,7 @@ body{
     background-image: url(images/background-jrdelrio.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 .frikiMundo{
@@ -416,9 +416,10 @@ nav .fas{
     display: none;
 }
 
-@media only screen and (max-width: 600px){
+@media screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) {
     #header{
         background-image: url(images/phone-background-jrdelrio.png);
+        background-attachment: scroll;
     }
     .header-text{
         margin-top: 20%;
