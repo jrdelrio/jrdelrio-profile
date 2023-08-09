@@ -153,6 +153,9 @@ nav ul li a:hover::after{
 .about-col-2{
     flex-basis: 60%;
 }
+.about-col-2 p{
+    text-align: justify;
+}
 
 .sub-title{
     font-size: 60px;
