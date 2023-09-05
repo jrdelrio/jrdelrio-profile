@@ -248,9 +248,23 @@ nav ul li a:hover::after{
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
 }
-.services-list div i{
+.services-list div i,
+.services-list div img{
     font-size: 50px;
     margin-bottom: 30px;
+    width: 50px;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-image {
+    animation: spin 5s linear infinite; /* Rotate the image indefinitely every 5 seconds */
 }
 .services-list div h2{
     font-size: 30px;
@@ -268,25 +282,36 @@ nav ul li a:hover::after{
     background: #ff004f;
     transform: translateY(-10px);
 }
+.services-list div p {
+    text-align: center;
+}
 /* -------portfolio----------- */
 #portfolio{
     padding: 50px 0;
 }
 .work-list{
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    display: flex;          /* Use flex to arrange children (items) in a row */
+    overflow-x: auto;       /* Allow horizontal scrolling */
+    white-space: nowrap;    /* Prevents wrapping of items */
+    scrollbar-width: thin;  /* Optional: reduce scrollbar width */
+    margin-top: 50px;
+    gap: 40px;              /* To add space between flex items */
 }
 .work{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    flex: 0 0 auto;         /* Don't let the items grow or shrink */
+    width: 300px;           /* Or whatever width you desire */
+    margin-right: 10px;     /* Space between items */
+
 }
 .work img{
     width: 100%;
     border-radius: 10px;
-    display: block;
     transition: transform 0.5s;
 }
 .layer{
@@ -305,7 +330,7 @@ nav ul li a:hover::after{
     padding: 0 40px;
     text-align: center;
     font-size: 14px;
-   transition: height 0.5s;
+    transition: height 0.5s;
 }
 .layer h3{
     font-weight: 500;
@@ -323,6 +348,15 @@ nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center;
 }
+
+.layer p {
+    justify-content: center;
+}
+
+.link-icon:hover{
+    color: black;
+}
+
 .work:hover img{
     transform: scale(1.1);
 }
