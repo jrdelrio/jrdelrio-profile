@@ -11,6 +11,10 @@ body{
     background: #080808;
     color: #fff;
 }
+
+/* TRY START*/
+
+/*MAIN*/
 #header{
     width: 100%;
     height: 100vh;
@@ -19,6 +23,10 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
+
+/*TRY*/
+
+/*TRY END*/
 
 .frikiMundo{
     font-family: 'Amatic SC', cursive;
@@ -460,6 +468,7 @@ nav .fas{
 @media only screen and (max-device-width: 600px){
     #header{
         background-image: url(images/phone-background-jrdelrio.jpg);
+        background-attachment: scroll;
     }
     .header-text{
         margin-top: 20%;
