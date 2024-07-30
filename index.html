@@ -456,17 +456,7 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby3XbC_fQotPUpeDLVL-GOC3H_83ye20eeNYybnyrr4FB88_-uQoDKW-2iYZnrTb3mn/exec'
-        const form = document.forms['submit-to-google-sheet']
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+   
 </body>
 
 </html>
