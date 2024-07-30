@@ -12,6 +12,7 @@ function opentab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 
+// side menu behaviour
 var sideMenu = document.getElementById("sideMenu");
 
 function openMenu() {
@@ -29,12 +30,12 @@ const msg = document.getElementById("msg");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
   const requestOptions = {
     method: "POST",
     body: new FormData(form),
-    redirect: 'follow',
-    mode: 'no-cors',
-    headers: {"Access-Control-Allow-Origin": "*"}
+    redirect: "follow",
+    mode: "no-cors",
   };
 
   fetch(scriptURL, requestOptions)
