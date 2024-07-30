@@ -32,6 +32,9 @@ form.addEventListener("submit", (e) => {
   fetch(scriptURL, {
     method: "POST",
     body: new FormData(form),
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
   })
     .then((response) => {
       msg.innerHTML = "Message sent successfully";
