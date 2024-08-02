@@ -41,30 +41,29 @@
 </head>
 
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo-jrdelrio.png" class="logo">
-                <ul id="sideMenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <!-- <li><a href="frikiMundo.html" class="frikiMundo">=My Frikimundo=</a></li> -->
-                    <i class="fas fa-times" onclick="closeMenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openMenu()"></i>
-            </nav>
-            <div class="header-text typing-text-container">
-                <p class="typing-text">Full-Stack Web Developer.</p>
-                <h1>Hi, I'm <span>José Raimundo</span><br> from Chile</h1>
-            </div>
+    <header id="header" class="container">
+        <nav>
+            <img src="images/logo-jrdelrio.png" class="logo">
+            <ul id="sideMenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- <li><a href="frikiMundo.html" class="frikiMundo">=My Frikimundo=</a></li> -->
+                <i class="fas fa-times" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text typing-text-container">
+            <p class="typing-text">Full-Stack Web Developer.</p>
+            <h1>Hi, I'm <span>José Raimundo</span><br> from Chile</h1>
         </div>
-    </div>
+    </header>
 
-    <!-- -----------about---------- -->
-    <div id="about">
+    <main>
+        <!-- -----------about---------- -->
+    <section id="about" class="container">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
@@ -231,27 +230,27 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- ---------services---------------- -->
-    <div id="services">
+    <section id="services">
         <div class="container">
             <h2 class="sub-title">My Services</h2>
             <div class="services-list">
-                <div>
+                <article>
                     <i class="fas fa-code"></i>
                     <h2>Web Development</h2>
                     <p>Full-stack development of web platforms. Frontend, Backend, API, SQL databases.</p>
                     <p>Junior level.</p>
                     <!-- <a href="#">Learn more</a> -->
-                </div>
-                <div>
+                </article>
+                <article>
                     <img class="rotate-image" src="./icons/gear.png">
                     <h2>Web Maintenance</h2>
                     <p>Refinement and integration of new changes and elements, continuously fostering a dynamic and
                         creative user experience.</p>
                     <!-- <a href="#">Learn more</a> -->
-                </div>
-                <div>
+                </article>
+                <article>
                     <!-- <i class="fab fa-app-store"></i> -->
                     <img src="./icons/responsive.png">
                     <h2>Responsive Design</h2>
@@ -259,18 +258,18 @@
                         a diverse range of screen sizes to provide
                         users with a consistent and intuitive interface.</p>
                     <!-- <a href="#">Learn more</a> -->
-                </div>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- ----------portfolio------------ -->
-    <div id="portfolio">
+    <section id="portfolio">
         <div class="container">
             <h2 class="sub-title">My Work</h2>
             <div class="work-list">
 
-                <div class="work" style="display: flex;
+                <article class="work" style="display: flex;
                 flex-direction: column;
                 justify-content: center;">
                     <img src="https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-1701527825725jymtr.png"
@@ -285,9 +284,9 @@
                         <a href="https://jrdelrio.github.io/pokemon/" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
+                </article>
 
-                <div class="work" style="display: flex;
+                <article class="work" style="display: flex;
                 flex-direction: column;
                 justify-content: center;">
                     <img src="https://i.pinimg.com/564x/27/e3/58/27e358b88ff45a6d05d18483d3a32b4b.jpg"
@@ -302,9 +301,9 @@
                         <a href="https://jrdelrio.github.io/mapa-mundi/" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
+                </article>
 
-                <div class="work" style="display: flex;
+                <article class="work" style="display: flex;
                 flex-direction: column;
                 justify-content: center;">
                     <img src="./images/srodillo-banner.jpg" style="height: auto">
@@ -318,9 +317,9 @@
                         <a href="https://jrdelrio.github.io/srodillo-profile/" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
+                </article>
 
-                <div class="work">
+                <article class="work">
                     <img src="images/qr-scan.png">
                     <div class="layer">
                         <h3>Restaurant Menu with QR code</h3>
@@ -332,9 +331,9 @@
                         <a href="https://github.com/jrdelrio/princesa-carta" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
+                </article>
 
-                <div class="work">
+                <article class="work">
                     <img src="images/starwars.png">
                     <div class="layer">
                         <h3>Star Wars blog exercise</h3>
@@ -344,9 +343,9 @@
                         <a href="https://github.com/jrdelrio/starwars-app" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
+                </article>
 
-                <div class="work">
+                <article class="work">
                     <img src="images/rickandmorty.png">
                     <div class="layer">
                         <h3>Rick & Morty character list</h3>
@@ -355,9 +354,9 @@
                         <a href="https://github.com/jrdelrio/rick-morty-character-list" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
+                </article>
 
-                <div class="work">
+                <article class="work">
                     <img src="images/arcade.jpg">
                     <div class="layer">
                         <h3>Alien Invasion Game</h3>
@@ -366,8 +365,8 @@
                         <a href="https://github.com/jrdelrio/alien_invasion" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+                <article class="work">
                     <img src="images/photosize.jpg" style="object-fit: cover;">
                     <div class="layer">
                         <h3>Photo Size®</h3>
@@ -376,8 +375,8 @@
                         <a href="https://github.com/jrdelrio/photosize" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+                <article class="work">
                     <img src="images/tenis.jpg" style="object-fit: cover;">
                     <div class="layer">
                         <h3>Pong</h3>
@@ -386,8 +385,8 @@
                         <a href="https://github.com/jrdelrio/pong-game" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+                <article class="work">
                     <img src="images/time.jpg" style="object-fit: cover;">
                     <div class="layer">
                         <h3>Simple Counter</h3>
@@ -396,8 +395,8 @@
                         <a href="https://github.com/jrdelrio/simple-counter" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+                <article class="work">
                     <img src="images/traffic-light.gif" style="object-fit: cover;">
                     <div class="layer">
                         <h3>Traffic Light Exercise</h3>
@@ -408,13 +407,13 @@
                         <a href="https://github.com/jrdelrio/simple-counter" target="_blank"><i
                                 class="fas fa-external-link-alt link-icon"></i></a>
                     </div>
-                </div>
+                </article>
             </div>
             <!-- <a href="#" class="btn">See more</a> -->
         </div>
-    </div>
+    </section>
     <!-- ----------contact------------- -->
-    <div id="contact">
+    <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -446,11 +445,12 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            <p>Made with <i class="fas fa-heart"></i> by <a href="#">José Raimundo del
-                    Rio - Fullstack Software Developer</a></p>
-        </div>
-    </div>
+    </section>
+    </main>
+    <footer class="copyright">
+        <p>Made with <i class="fas fa-heart"></i> by <a href="#">José Raimundo del
+                Rio - Fullstack Software Developer</a></p>
+    </footer>
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
