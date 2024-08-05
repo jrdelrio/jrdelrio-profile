@@ -97,39 +97,41 @@ nav ul li a:hover::after{
     font-size: 30px;
 }
 
-/* The typing effect */
+/*Aquí definimos los estilos que usamos arriba*/
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}  
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #fff; }
+    from {
+        width: 0; 
+        /* Inicia la animación desde un ancho de 0 */
+    }
 }
-.header-text p {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+
+@keyframes blink {
+    50% {
+        border-color: transparent; 
+        /* Hace que el borde parpadee (sea transparente el 50% del tiempo) */
+    }
+}
+
+.typing-text {
+    display: block;
     font-family: 'Roboto Mono', monospace;
+    white-space: nowrap; 
+    letter-spacing: .15em;
+    border-right: .15em solid white;
+    width: 31ch; 
+    overflow: hidden;
+
+    animation: 
+    typing 3s steps(24), 
+    blink .5s infinite step-end alternate; 
+    
+    
 
     animation: 
       typing 3s steps(40, end),
-      blink-caret .75s step-end infinite;
+      blink-caret .5s infinite step-end infinite;
 }
-.header-text p::after {
-    content: ''; /* Add a pseudo-element to represent the blinking caret */
-    display: inline-block;
-    width: 2px; /* Adjust the width of the blinking caret */
-    height: 1em; /* Adjust the height of the blinking caret */
-    margin-left: 2px; /* Adjust the distance between the caret and the last character */
-    
 
-    top: 0;
-    animation: blink-caret .75s step-end infinite;
-  }
 
 
 .header-text h1{
