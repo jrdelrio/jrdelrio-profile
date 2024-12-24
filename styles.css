@@ -474,7 +474,7 @@ nav .fas{
 
 @media only screen and (max-device-width: 600px){
     #header{
-        background-image: url(images/phone-background-jrdelrio.jpg);
+        /*background-image: url(images/phone-background-jrdelrio.jpg);*/
         background-attachment: scroll;
     }
     .header-text{
