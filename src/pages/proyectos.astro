@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { projects } from "../data/projects";
+---
+
+<Layout
+    active="projects"
+    title="Proyectos | Raimundo del Río"
+    description="Sitios y plataformas web a medida, con Next.js, Astro y Sanity."
+>
+    <main class="pt-[72px]">
+        <header class="section !pb-12">
+            <div class="container-x grid-12">
+                <div class="col-span-12 md:col-span-8">
+                    <h1 class="h1 mb-4" data-i18n="proyectos.title">Proyectos</h1>
+                    <p class="lead text-stone-text max-w-[56ch]" data-i18n="proyectos.intro">
+                        Sitios reales, en producción. Para cada uno, lo que construí y con qué stack.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section class="pb-[clamp(72px,10vw,120px)]">
+            <div class="container-x grid-12 gap-y-6">
+                {
+                    projects.map((p) => (
+                        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+                            <ProjectCard project={p} />
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="container-x py-16 md:py-20 grid-12 gap-y-6 items-center">
+                <div class="col-span-12 md:col-span-7">
+                    <h2 class="h3 mb-2" data-i18n="proyectos.cta_heading">¿Tienes un proyecto en mente?</h2>
+                    <p class="text-stone-text" data-i18n="proyectos.cta_body">Cuéntame qué necesitas y te preparo una cotización.</p>
+                </div>
+                <div class="col-span-12 md:col-span-4 md:col-start-9">
+                    <a href="/#contact" class="btn btn-primary btn-lg" data-i18n="proyectos.cta_btn">Cotizar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

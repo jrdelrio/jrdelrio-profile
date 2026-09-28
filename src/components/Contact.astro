@@ -1,0 +1,104 @@
+---
+---
+
+<section class="section band" id="contact">
+    <div class="container-x">
+        <div class="grid-12 gap-y-12">
+            <div class="col-span-12 md:col-span-5">
+                <h2 class="h2 mb-6" data-i18n="contact.heading">
+                    Construyamos algo <span class="text-stone-text">significativo.</span>
+                </h2>
+                <p class="text-stone-text max-w-[46ch] mb-10" data-i18n="contact.lead">
+                    Cuéntame qué necesitas y te preparo una cotización. También puedes escribirme directo.
+                </p>
+                <dl class="space-y-6">
+                    <div>
+                        <dt class="label mb-1" data-i18n="contact.email_label">Correo</dt>
+                        <dd><a class="link" href="mailto:jrdelriodom@gmail.com">jrdelriodom@gmail.com</a></dd>
+                    </div>
+                    <div>
+                        <dt class="label mb-1">WhatsApp</dt>
+                        <dd><a class="link" href="https://wa.me/56984138467" target="_blank" rel="noopener">+56 9 8413 8467</a></dd>
+                    </div>
+                    <div>
+                        <dt class="label mb-1" data-i18n="contact.follow_label">Sígueme</dt>
+                        <dd class="flex flex-wrap gap-x-6 gap-y-2">
+                            <a class="link" href="https://www.linkedin.com/in/jrdelriod/" target="_blank" rel="noopener">LinkedIn</a>
+                            <a class="link" href="https://github.com/jrdelrio" target="_blank" rel="noopener">GitHub</a>
+                            <a class="link" href="https://medium.com/@jrdelriodom" target="_blank" rel="noopener">Medium</a>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="col-span-12 md:col-span-6 md:col-start-7">
+                <form id="contact-form" class="card p-9 space-y-6" novalidate>
+                    <div class="hidden" aria-hidden="true">
+                        <label>Empresa <input name="company" type="text" tabindex="-1" autocomplete="off" /></label>
+                    </div>
+                    <div>
+                        <label for="cf-name" class="label block mb-[6px]" data-i18n="contact.name_label">Nombre completo</label>
+                        <input id="cf-name" name="name" required maxlength="100" autocomplete="name" class="field" placeholder="Juan Pérez" data-i18n-placeholder="contact.ph_name" type="text" />
+                    </div>
+                    <div>
+                        <label for="cf-email" class="label block mb-[6px]" data-i18n="contact.email_field">Correo electrónico</label>
+                        <input id="cf-email" name="email" required maxlength="200" autocomplete="email" class="field" placeholder="juan@ejemplo.com" data-i18n-placeholder="contact.ph_email" type="email" />
+                    </div>
+                    <div>
+                        <label for="cf-message" class="label block mb-[6px]" data-i18n="contact.msg_label">Tu mensaje</label>
+                        <textarea id="cf-message" name="message" required minlength="10" maxlength="5000" class="field resize-none" placeholder="Cuéntame sobre tu proyecto..." data-i18n-placeholder="contact.ph_msg" rows="5"></textarea>
+                    </div>
+                    <button id="cf-submit" class="btn btn-primary btn-lg w-full" type="submit">
+                        <span data-i18n="contact.send">Enviar mensaje</span>
+                        <span class="material-symbols-outlined text-[18px]" aria-hidden="true">send</span>
+                    </button>
+                    <p id="cf-status" class="small min-h-[1.5rem]" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { translations } from "../i18n/translations.js";
+
+    const form = document.getElementById("contact-form") as HTMLFormElement | null;
+    const status = document.getElementById("cf-status");
+    const submit = document.getElementById("cf-submit") as HTMLButtonElement | null;
+
+    const t = (key: string) => {
+        const lang = document.documentElement.lang === "en" ? "en" : "es";
+        return (translations as any)[lang][key] ?? (translations as any).es[key];
+    };
+
+    function show(key: string, ok: boolean) {
+        if (!status) return;
+        status.textContent = t(key);
+        status.className = `small min-h-[1.5rem] ${ok ? "text-stone-dark" : "text-danger"}`;
+    }
+
+    form?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+        const data = Object.fromEntries(new FormData(form));
+        submit!.disabled = true;
+        show("contact.sending", true);
+        try {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+            if (!res.ok) throw new Error();
+            form.reset();
+            show("contact.sent", true);
+        } catch {
+            show("contact.failed", false);
+        } finally {
+            submit!.disabled = false;
+        }
+    });
+</script>

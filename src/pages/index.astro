@@ -1,9 +1,18 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import ServicesPreview from "../components/ServicesPreview.astro";
+import FeaturedProjects from "../components/FeaturedProjects.astro";
+import Contact from "../components/Contact.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout active="home">
+    <main>
+        <Hero />
+        <About />
+        <ServicesPreview />
+        <FeaturedProjects />
+        <Contact />
+    </main>
 </Layout>

@@ -1,0 +1,25 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import { featuredProjects } from "../data/projects";
+---
+
+<section class="section" id="projects">
+    <div class="container-x">
+        <div class="flex flex-wrap items-end justify-between gap-6 mb-14">
+            <h2 class="h2 max-w-[20ch]" data-i18n="projects.heading">Trabajos seleccionados</h2>
+            <a href="/proyectos" class="link">
+                <span data-i18n="projects.viewall">Ver todos</span>
+            </a>
+        </div>
+
+        <div class="grid-12 gap-y-6">
+            {
+                featuredProjects.map((p, i) => (
+                    <div class={`col-span-12 md:col-span-6 ${i < 3 ? "lg:col-span-4" : "lg:col-span-6"}`}>
+                        <ProjectCard project={p} />
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

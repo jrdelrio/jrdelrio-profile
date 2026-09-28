@@ -1,0 +1,29 @@
+---
+const year = new Date().getFullYear();
+const socials = [
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/jrdelriod/" },
+    { label: "GitHub", href: "https://github.com/jrdelrio" },
+    { label: "Medium", href: "https://medium.com/@jrdelriodom" },
+    { label: "WhatsApp", href: "https://wa.me/56984138467" },
+];
+---
+
+<footer class="rule">
+    <div class="container-x py-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div>
+            <p class="h4 mb-1">Raimundo del Río</p>
+            <p class="small text-stone-text">
+                © {year} · <span data-i18n="footer.built">Desarrollo web full-stack · Chilisites</span>
+            </p>
+        </div>
+        <ul class="flex flex-wrap gap-x-6 gap-y-2">
+            {
+                socials.map((s) => (
+                    <li>
+                        <a href={s.href} target="_blank" rel="noopener" class="link">{s.label}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</footer>

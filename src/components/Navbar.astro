@@ -1,0 +1,88 @@
+---
+interface Props {
+    active?: "home" | "projects" | "services" | "blog";
+}
+const { active = "home" } = Astro.props;
+
+const links = [
+    { label: "Proyectos", href: "/proyectos", key: "projects" },
+    { label: "Servicios", href: "/servicios", key: "services" },
+    { label: "Sobre mí", href: "/#about", key: "about" },
+    { label: "Blog", href: "/blog", key: "blog" },
+];
+---
+
+<header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-warm rule-b">
+    <nav class="container-x h-[72px] flex items-center justify-between gap-6" aria-label="Principal">
+        <a href="/" class="font-[var(--font-headline)] text-[18px] font-medium text-stone-dark">
+            Raimundo del Río
+        </a>
+
+        <ul class="hidden md:flex items-center gap-9">
+            {
+                links.map((l) => (
+                    <li>
+                        <a
+                            href={l.href}
+                            aria-current={l.key === active ? "page" : undefined}
+                            data-i18n={`nav.${l.key}`}
+                            class:list={[
+                                "py-1 border-b transition-colors hover:text-stone-deep",
+                                l.key === active ? "border-stone-dark text-stone-deep font-medium" : "border-transparent text-stone-dark",
+                            ]}
+                        >
+                            {l.label}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+
+        <div class="flex items-center gap-3">
+            <button id="lang-toggle" type="button" aria-label="Cambiar idioma" class="btn btn-ghost btn-sm">EN</button>
+            <a href="/#contact" data-i18n="nav.contact" class="hidden md:inline-flex btn btn-secondary btn-sm">Contacto</a>
+            <button
+                id="menu-toggle"
+                type="button"
+                class="md:hidden p-2 -mr-2 text-stone-dark"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+            >
+                <span class="material-symbols-outlined text-[26px]" aria-hidden="true">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-warm rule">
+        <ul class="container-x py-3 flex flex-col">
+            {
+                [...links, { label: "Contacto", href: "/#contact", key: "contact" }].map((l) => (
+                    <li>
+                        <a href={l.href} data-i18n={`nav.${l.key}`} class="block py-3 text-stone-dark rule-b">
+                            {l.label}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</header>
+
+<script is:inline>
+    (function () {
+        var btn = document.getElementById("menu-toggle");
+        var menu = document.getElementById("mobile-menu");
+        if (!btn || !menu) return;
+        btn.addEventListener("click", function () {
+            menu.classList.toggle("hidden");
+            btn.setAttribute("aria-expanded", String(!menu.classList.contains("hidden")));
+        });
+        menu.addEventListener("click", function (e) {
+            if (e.target.closest("a")) {
+                menu.classList.add("hidden");
+                btn.setAttribute("aria-expanded", "false");
+            }
+        });
+    })();
+</script>

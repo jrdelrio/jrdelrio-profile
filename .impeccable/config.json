@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "src/lib/medium.ts"
+        ],
+        "createdAt": "2026-09-25T03:27:58.613Z",
+        "reason": "Claude: L40 is a regex matching <img> in Medium RSS HTML, not rendered markup"
+      }
+    ]
+  }
+}

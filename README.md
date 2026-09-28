@@ -93,7 +93,7 @@ Actualmente lidero el desarrollo de soluciones web en Chilisites, desde diseño 
 ## 📄 Descarga mi CV
 
 Puedes descargar mi CV directamente:  
-[⬇️ CV_JoseRaimundoDelRio.pdf](./public/CV_JoseRaimundoDelRio.pdf)
+[⬇️ CV_Jose_Raimundo_del_Rio_Domeyko.pdf](./public/CV_Jose_Raimundo_del_Rio_Domeyko.pdf)
 
 ---
 
