@@ -1,20 +1,20 @@
 ---
-const stack = ["Next.js", "Astro", "Sanity", "Django", "PostgreSQL"];
+import HeroToolkitModal from './HeroToolkitModal';
 ---
 
-<section class="min-h-[100svh] flex items-end">
-    <div class="container-x w-full pt-40 pb-[clamp(48px,8vw,96px)]">
+<section>
+    <div class="container-x w-full pt-[clamp(128px,14vw,184px)] pb-[clamp(56px,8vw,96px)]">
         <div class="grid-12">
             <div class="col-span-12 md:col-span-9 lg:col-span-8">
                 <h1 class="display hero-in mb-6" style="--i:0">
-                    Raimundo <span class="text-stone-text">del Río</span>
+                    Raimundo <span class="text-muted">del Río</span>
                 </h1>
 
-                <p class="hero-in lead text-stone-dark max-w-[46ch] mb-4" style="--i:1" data-i18n="hero.role">
+                <p class="hero-in font-medium text-ink max-w-[46ch] mb-4" style="--i:1" data-i18n="hero.role">
                     Desarrollador web full-stack y fundador de Chilisites
                 </p>
 
-                <p class="hero-in text-stone-text max-w-[54ch] mb-10" style="--i:2" data-i18n="hero.desc">
+                <p class="hero-in text-muted max-w-[54ch] mb-10" style="--i:2" data-i18n="hero.desc">
                     Diseño y construyo sitios y plataformas con Next.js, Astro y Sanity, y me encargo de dejarlos funcionando: dominio, correos y hosting.
                 </p>
 
@@ -29,13 +29,7 @@ const stack = ["Next.js", "Astro", "Sanity", "Django", "PostgreSQL"];
         </div>
 
         <div class="hero-in rule mt-16 pt-6 flex flex-wrap items-center justify-between gap-x-8 gap-y-3" style="--i:4">
-            <ul class="mono text-[12px] sm:text-[13px] text-stone-text flex flex-wrap gap-x-3 sm:gap-x-6 gap-y-1">
-                {stack.map((s) => <li>{s}</li>)}
-            </ul>
-            <p class="small text-stone-text flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-success" aria-hidden="true"></span>
-                <span data-i18n="hero.badge">Disponible para nuevos proyectos</span>
-            </p>
+            <HeroToolkitModal client:load />
         </div>
     </div>
 </section>
