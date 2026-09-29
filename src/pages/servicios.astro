@@ -13,14 +13,14 @@ import { services } from "../data/services";
             <div class="container-x grid-12">
                 <div class="col-span-12 md:col-span-8">
                     <h1 class="h1 mb-4" data-i18n="servicios.title">Servicios</h1>
-                    <p class="lead text-stone-text max-w-[56ch]" data-i18n="servicios.intro">
+                    <p class="text-muted max-w-[56ch]" data-i18n="servicios.intro">
                         Me encargo del proyecto completo: diseño, desarrollo, contenido, dominio, correos y hosting. Y si quieres crecer, con Chilisites sumamos SEO y campañas.
                     </p>
                 </div>
             </div>
         </header>
 
-        <section class="pb-[clamp(72px,10vw,120px)]">
+        <section class="pb-[clamp(64px,9vw,112px)]">
             <div class="container-x">
                 <ul class="rule">
                     {
@@ -28,10 +28,10 @@ import { services } from "../data/services";
                             <li class="grid-12 gap-y-4 py-10 rule-b">
                                 <h2 class="h3 col-span-12 md:col-span-4" data-i18n={`svc.${s.key}.title`}>{s.title.es}</h2>
                                 <div class="col-span-12 md:col-span-7 md:col-start-6">
-                                    <p class="text-stone-text max-w-[62ch] mb-5" data-i18n={`svc.${s.key}.desc`}>{s.desc.es}</p>
-                                    <ul class="flex flex-wrap gap-2">
+                                    <p class="text-muted max-w-[62ch] mb-5" data-i18n={`svc.${s.key}.desc`}>{s.desc.es}</p>
+                                    <ul class="diff-list">
                                         {s.includes.map((x, j) => (
-                                            <li class="chip" data-i18n={`svc.${s.key}.i${j}`}>{x.es}</li>
+                                            <li class="diff" data-i18n={`svc.${s.key}.i${j}`}>{x.es}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -39,7 +39,7 @@ import { services } from "../data/services";
                         ))
                     }
                 </ul>
-                <p class="mt-8 text-stone-text max-w-[62ch]" data-i18n="sv.also">
+                <p class="mt-8 text-muted max-w-[62ch]" data-i18n="sv.also">
                     También trabajo con Shopify y WordPress cuando el proyecto lo pide, por ejemplo si ya vendes por esas plataformas.
                 </p>
             </div>
@@ -49,7 +49,7 @@ import { services } from "../data/services";
             <div class="container-x py-16 md:py-20 grid-12 gap-y-6 items-center">
                 <div class="col-span-12 md:col-span-7">
                     <h2 class="h3 mb-2" data-i18n="sv.cta.heading">¿Tienes un proyecto? Hablemos</h2>
-                    <p class="text-stone-text" data-i18n="sv.cta.body">Cuéntame qué necesitas y te preparo una cotización.</p>
+                    <p class="text-muted" data-i18n="sv.cta.body">Cuéntame qué necesitas y te preparo una cotización.</p>
                 </div>
                 <div class="col-span-12 md:col-span-4 md:col-start-9">
                     <a href="/#contact" class="btn btn-primary btn-lg" data-i18n="sv.cta.btn">Enviar mensaje</a>

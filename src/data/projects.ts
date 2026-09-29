@@ -11,6 +11,8 @@ export interface Project {
     stack: string[];
     /** Aparece en el home. */
     featured: boolean;
+    /** No mostrar el dominio (sitios sin dominio propio). */
+    hideHost?: boolean;
 }
 
 // Para agregar un proyecto: guarda su captura como src/assets/projects/<slug>.webp y añade un objeto aquí.
@@ -154,6 +156,117 @@ export const projects: Project[] = [
         ],
         stack: ["Astro"],
         featured: false,
+    },
+    {
+        slug: "chrismadrid",
+        name: "Chris Madrid",
+        url: "https://chrismadridserrano.com",
+        summary: {
+            es: "Portafolio de Chris Madrid, escalador profesional y ambientalista.",
+            en: "Portfolio of Chris Madrid, professional climber and environmentalist.",
+        },
+        features: [
+            { es: "Blog", en: "Blog" },
+            { es: "Galería de arte", en: "Art gallery" },
+            { es: "Contenido autogestionable", en: "Self-managed content" },
+        ],
+        stack: ["Astro"],
+        featured: false,
+    },
+    {
+        slug: "fotografia",
+        name: "Raimundo del Río Fotografía",
+        url: "https://raimundo-delrio-photography.vercel.app/es",
+        summary: {
+            es: "Mi portafolio de fotografía: paisajes de Chile y el mundo.",
+            en: "My photography portfolio: landscapes from Chile and around the world.",
+        },
+        features: [
+            { es: "Galería autogestionable", en: "Self-managed gallery" },
+            { es: "SEO técnico", en: "Technical SEO" },
+            { es: "Sitio bilingüe", en: "Bilingual site" },
+        ],
+        stack: ["Next.js", "Sanity"],
+        featured: false,
+        hideHost: true,
+    },
+    {
+        slug: "lipangue",
+        name: "Parque Lipangue",
+        url: "https://parquelipangue.cl",
+        summary: {
+            es: "Sitio oficial del centro de eventos Parque Lipangue, en Santiago.",
+            en: "Official site of the Parque Lipangue event venue in Santiago.",
+        },
+        features: [
+            { es: "Landing con galería", en: "Landing page with gallery" },
+            { es: "Contacto automatizado", en: "Automated contact" },
+        ],
+        stack: ["HTML", "Bootstrap", "JavaScript"],
+        featured: false,
+    },
+    {
+        slug: "domingoprieto",
+        name: "Dr. Domingo Prieto",
+        url: "https://www.jdomingoprieto.com",
+        summary: {
+            es: "Sitio profesional del Dr. Domingo Prieto, neurólogo y kinesiólogo.",
+            en: "Professional site of Dr. Domingo Prieto, neurologist and physiotherapist.",
+        },
+        features: [
+            { es: "Información y contacto", en: "Profile and contact" },
+            { es: "Material protegido con contraseña", en: "Password-protected materials" },
+        ],
+        stack: ["React"],
+        featured: false,
+    },
+    {
+        slug: "fsr",
+        name: "FSR Inspecciones",
+        url: "https://www.fsrinspecciones.cl",
+        summary: {
+            es: "Consultora de inspección técnica de obra y control de calidad en construcción.",
+            en: "Construction quality control and technical site inspection consultancy.",
+        },
+        features: [
+            { es: "Servicios y proyectos tipo", en: "Services and reference projects" },
+            { es: "Ficha por integrante del equipo", en: "Individual team member pages" },
+            { es: "Formulario de contacto", en: "Contact form" },
+        ],
+        stack: ["Astro"],
+        featured: false,
+    },
+    {
+        slug: "grp",
+        name: "GRP Ingeniería",
+        url: "https://www.grpingenieria.cl",
+        summary: {
+            es: "Gestión contractual para proyectos de Metro, ferrocarriles e infraestructura.",
+            en: "Contract management for metro, railway and infrastructure projects.",
+        },
+        features: [
+            { es: "Sitio bilingüe", en: "Bilingual site" },
+            { es: "Modo claro y oscuro", en: "Light and dark mode" },
+            { es: "Formulario de consulta", en: "Inquiry form" },
+        ],
+        stack: ["Astro"],
+        featured: false,
+    },
+    {
+        slug: "ordereat",
+        name: "OrderEat",
+        url: "https://ordereat-landings.vercel.app",
+        summary: {
+            es: "Landings para OrderEat, sistema de gestión de comedores escolares en Uruguay.",
+            en: "Landing pages for OrderEat, a school cafeteria management system in Uruguay.",
+        },
+        features: [
+            { es: "Landings para campañas de Google Ads", en: "Landing pages for Google Ads campaigns" },
+            { es: "Formulario para agendar reuniones", en: "Meeting booking form" },
+        ],
+        stack: ["Next.js"],
+        featured: false,
+        hideHost: true,
     },
 ];
 

@@ -118,13 +118,13 @@ export default function ChatWidget() {
                 <div
                     role="dialog"
                     aria-label={t.title}
-                    className="absolute bottom-[64px] right-0 w-[min(92vw,380px)] rounded-md overflow-hidden flex flex-col bg-raised border border-[color:var(--border-strong)]"
+                    className="absolute bottom-[64px] right-0 w-[min(92vw,380px)] rounded-[10px] overflow-hidden flex flex-col bg-surface border border-[color:var(--border-strong)]"
                 >
-                    <div className="px-5 py-3 bg-sunken border-b border-[color:var(--border-default)] flex justify-between items-center shrink-0">
-                        <span className="font-[var(--font-headline)] font-medium text-stone-dark text-[18px]">{t.title}</span>
+                    <div className="px-5 py-3 bg-surface border-b border-[color:var(--border-default)] flex justify-between items-center shrink-0">
+                        <span className="h4">{t.title}</span>
                         <button
                             type="button"
-                            className="text-stone-text hover:text-stone-dark p-1 -mr-1"
+                            className="text-muted hover:text-ink p-1 -mr-1"
                             onClick={() => setOpen(false)}
                             aria-label={t.close}
                         >
@@ -134,7 +134,7 @@ export default function ChatWidget() {
 
                     <div
                         ref={scrollRef}
-                        className="bg-warm p-5 space-y-3 overflow-y-auto h-[min(60vh,360px)] text-[15px] leading-relaxed"
+                        className="bg-paper p-5 space-y-3 overflow-y-auto h-[min(60vh,360px)] leading-relaxed"
                         aria-live="polite"
                     >
                         {messages.map((m, i) => (
@@ -142,8 +142,8 @@ export default function ChatWidget() {
                                 <p
                                     className={
                                         m.role === "user"
-                                            ? "px-4 py-2.5 rounded max-w-[85%] bg-stone text-white whitespace-pre-line"
-                                            : "px-4 py-2.5 rounded max-w-[85%] bg-sunken border border-[color:var(--border-default)] text-stone-dark whitespace-pre-line"
+                                            ? "px-4 py-2.5 rounded max-w-[85%] bg-ink text-surface whitespace-pre-line"
+                                            : "px-4 py-2.5 rounded max-w-[85%] bg-surface border border-[color:var(--border-default)] text-ink whitespace-pre-line"
                                     }
                                 >
                                     {m.content}
@@ -152,18 +152,18 @@ export default function ChatWidget() {
                         ))}
                         {loading && (
                             <div className="flex justify-start" aria-label="…">
-                                <p className="px-4 py-3 rounded bg-sunken border border-[color:var(--border-default)]">
+                                <p className="px-4 py-3 rounded bg-surface border border-[color:var(--border-default)]">
                                     <span className="inline-flex gap-1">
-                                        <span className="w-1.5 h-1.5 bg-stone rounded-full animate-pulse [animation-delay:-0.4s]"></span>
-                                        <span className="w-1.5 h-1.5 bg-stone rounded-full animate-pulse [animation-delay:-0.2s]"></span>
-                                        <span className="w-1.5 h-1.5 bg-stone rounded-full animate-pulse"></span>
+                                        <span className="w-1.5 h-1.5 bg-ink rounded-full animate-pulse [animation-delay:-0.4s]"></span>
+                                        <span className="w-1.5 h-1.5 bg-ink rounded-full animate-pulse [animation-delay:-0.2s]"></span>
+                                        <span className="w-1.5 h-1.5 bg-ink rounded-full animate-pulse"></span>
                                     </span>
                                 </p>
                             </div>
                         )}
                     </div>
 
-                    <div className="p-4 bg-raised border-t border-[color:var(--border-default)] flex gap-2 shrink-0">
+                    <div className="p-4 bg-surface border-t border-[color:var(--border-default)] flex gap-2 shrink-0">
                         <input
                             ref={inputRef}
                             className="field flex-1 min-w-0"
@@ -179,7 +179,7 @@ export default function ChatWidget() {
                             type="button"
                             onClick={send}
                             disabled={loading || !input.trim()}
-                            className="btn btn-primary btn-md !px-3 shrink-0"
+                            className="btn btn-ink btn-md !px-3 shrink-0"
                             aria-label={t.send}
                         >
                             <span className="material-symbols-outlined text-[20px]" aria-hidden="true">send</span>
@@ -189,7 +189,7 @@ export default function ChatWidget() {
             )}
 
             <button
-                className="btn btn-primary w-12 h-12 !p-0"
+                className="btn btn-ink w-12 h-12 !p-0"
                 type="button"
                 onClick={() => setOpen((o) => !o)}
                 aria-label={open ? t.close : t.open}

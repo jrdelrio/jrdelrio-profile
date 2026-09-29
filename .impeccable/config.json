@@ -11,6 +11,66 @@
         ],
         "createdAt": "2026-09-25T03:27:58.613Z",
         "reason": "Claude: L40 is a regex matching <img> in Medium RSS HTML, not rendered markup"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "18px",
+        "createdAt": "2026-09-28T21:45:01.983Z",
+        "reason": "Claude: Material Symbols icon glyph sizes, not text; all text uses the DESIGN.md ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "20px",
+        "createdAt": "2026-09-28T21:45:02.000Z",
+        "reason": "Claude: Material Symbols icon glyph sizes, not text; all text uses the DESIGN.md ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "22px",
+        "createdAt": "2026-09-28T21:45:02.026Z",
+        "reason": "Claude: Material Symbols icon glyph sizes, not text; all text uses the DESIGN.md ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "24px",
+        "createdAt": "2026-09-28T21:45:02.041Z",
+        "reason": "Claude: Material Symbols icon glyph sizes, not text; all text uses the DESIGN.md ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "26px",
+        "createdAt": "2026-09-28T21:45:02.058Z",
+        "reason": "Claude: Material Symbols icon glyph sizes, not text; all text uses the DESIGN.md ramp"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "material symbols outlined",
+        "createdAt": "2026-09-28T21:45:02.072Z",
+        "reason": "Claude: icon font, not a text face"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(17, 99, 41, 0.07)",
+        "createdAt": "2026-09-28T21:45:02.108Z",
+        "reason": "User confirmed: diff green (#116329) tint for '+' lines, the system's named 'diff green'"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "2rem",
+        "files": [
+          "src/styles/global.css"
+        ],
+        "createdAt": "2026-09-28T21:45:19.789Z",
+        "reason": "Claude: fluid mobile minimum of the 3.25rem display so the name fits at 390px"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.35rem",
+        "files": [
+          "src/styles/global.css"
+        ],
+        "createdAt": "2026-09-28T21:45:19.802Z",
+        "reason": "Claude: fluid mobile minimum of the 1.7rem h1"
       }
     ]
   }

@@ -4,7 +4,7 @@ import { services } from "../data/services";
 const projectLines = projects
     .map(
         (p) =>
-            `- ${p.name} (${p.url.replace(/^https?:\/\//, "")}): ${p.summary.es} Stack: ${p.stack.join(", ")}. Lo destacado: ${p.features.map((f) => f.es).join(", ")}.`,
+            `- ${p.name}${p.hideHost ? "" : ` (${p.url.replace(/^https?:\/\//, "")})`}: ${p.summary.es} Stack: ${p.stack.join(", ")}. Lo destacado: ${p.features.map((f) => f.es).join(", ")}.`,
     )
     .join("\n");
 
@@ -31,7 +31,9 @@ QUIÉN SOY
 
 STACK QUE USO
 - Combinaciones habituales: Next.js + Tailwind + Sanity; Astro + Tailwind; Next.js o Astro + Sanity; Next.js + Tailwind + Django.
-- Backend y datos: Django, Flask, PostgreSQL, Supabase.
+- Lenguajes: TypeScript en el frontend y Python en el backend.
+- Backend y datos: Django, Flask, PostgreSQL, Supabase. Docker para contenedores y entornos reproducibles.
+- Desarrollo asistido con IA: uso Claude en mi flujo de trabajo para programar más rápido, sin descuidar la revisión y la calidad del código.
 - Correo y operación: Resend (correos transaccionales), Zoho (correos corporativos).
 - Shopify y WordPress: los trabajo cuando el proyecto lo pide (por ejemplo, si el cliente ya vende por ahí), pero no son mi fuerte; mi fuerte es el desarrollo a medida.
 

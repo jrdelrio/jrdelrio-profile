@@ -3,12 +3,12 @@
 
 <section class="section band" id="contact">
     <div class="container-x">
+        <h2 class="h2 mb-10" data-i18n="contact.heading">
+            Construyamos algo <span class="text-muted">significativo.</span>
+        </h2>
         <div class="grid-12 gap-y-12">
             <div class="col-span-12 md:col-span-5">
-                <h2 class="h2 mb-6" data-i18n="contact.heading">
-                    Construyamos algo <span class="text-stone-text">significativo.</span>
-                </h2>
-                <p class="text-stone-text max-w-[46ch] mb-10" data-i18n="contact.lead">
+                <p class="text-muted max-w-[46ch] mb-10" data-i18n="contact.lead">
                     Cuéntame qué necesitas y te preparo una cotización. También puedes escribirme directo.
                 </p>
                 <dl class="space-y-6">
@@ -74,7 +74,7 @@
     function show(key: string, ok: boolean) {
         if (!status) return;
         status.textContent = t(key);
-        status.className = `small min-h-[1.5rem] ${ok ? "text-stone-dark" : "text-danger"}`;
+        status.className = `small min-h-[1.5rem] ${ok ? "text-ink" : "text-danger"}`;
     }
 
     form?.addEventListener("submit", async (e) => {

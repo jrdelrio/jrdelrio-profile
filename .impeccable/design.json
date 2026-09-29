@@ -1,62 +1,59 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-27T00:00:00Z",
-  "title": "Design System: Raimundo del Río (ZenGrid)",
+  "generatedAt": "2026-09-28T00:00:00Z",
+  "title": "Design System: OSS Terminal",
   "extensions": {
     "colorMeta": {
-      "warm": { "role": "neutral", "displayName": "Warm White", "canonical": "#faf9f6", "tonalRamp": ["#2b2a28", "#4d4b48", "#726f6b", "#9a9793", "#bfbcb8", "#dedbd7", "#efeeea", "#faf9f6"] },
-      "raised": { "role": "neutral", "displayName": "Raised White", "canonical": "#ffffff", "tonalRamp": ["#403f3e", "#666564", "#8c8b8a", "#b3b2b1", "#d1d0cf", "#e6e5e4", "#f3f2f1", "#ffffff"] },
-      "sunken": { "role": "neutral", "displayName": "Sunken Band", "canonical": "#f5f4f1", "tonalRamp": ["#292826", "#4a4845", "#6f6c68", "#96938f", "#bab7b3", "#d9d6d2", "#ebe9e5", "#f5f4f1"] },
-      "stone": { "role": "primary", "displayName": "Stone", "canonical": "#78716c", "tonalRamp": ["#1f1c1a", "#34302d", "#4a4541", "#5f5954", "#78716c", "#948d88", "#b6b0ab", "#dcd8d5"] },
-      "stone-text": { "role": "neutral", "displayName": "Stone Text (secondary)", "canonical": "#6b6560", "tonalRamp": ["#1c1a18", "#312e2b", "#45413d", "#57534e", "#6b6560", "#8a847f", "#b0aaa5", "#dad6d2"] },
-      "stone-dark": { "role": "neutral", "displayName": "Stone Dark (text and headings)", "canonical": "#57534e", "tonalRamp": ["#171514", "#292624", "#3a3633", "#57534e", "#6d6862", "#8f8a84", "#b8b3ae", "#dedad6"] },
-      "stone-deep": { "role": "neutral", "displayName": "Stone Deep (pressed and link hover)", "canonical": "#44403c", "tonalRamp": ["#141210", "#211f1c", "#2f2c29", "#44403c", "#5d5853", "#7f7a74", "#aca7a2", "#d9d5d1"] },
-      "sage": { "role": "secondary", "displayName": "Sage (borders only)", "canonical": "#a8a29e", "tonalRamp": ["#2a2725", "#4a4643", "#6c6763", "#8a8480", "#a8a29e", "#c1bcb8", "#d9d5d2", "#eeecea"] },
-      "success": { "role": "tertiary", "displayName": "Success Green (state only)", "canonical": "#65a30d", "tonalRamp": ["#1a2a03", "#2f4d06", "#437208", "#54890a", "#65a30d", "#8bc140", "#b5d883", "#e0efc6"] },
-      "warning": { "role": "tertiary", "displayName": "Warning Amber (state only, unused)", "canonical": "#ca8a04", "tonalRamp": ["#3a2701", "#5e4102", "#825a03", "#a67003", "#ca8a04", "#e0ab3a", "#ecc97f", "#f8e8c2"] },
-      "danger": { "role": "tertiary", "displayName": "Danger Red (state only)", "canonical": "#dc2626", "tonalRamp": ["#3b0808", "#5f0f0f", "#8a1616", "#b91c1c", "#dc2626", "#e96767", "#f2a3a3", "#fbdcdc"] },
-      "danger-deep": { "role": "tertiary", "displayName": "Danger Deep (error text)", "canonical": "#b91c1c", "tonalRamp": ["#2f0606", "#4f0c0c", "#701212", "#8f1717", "#b91c1c", "#d05a5a", "#e59a9a", "#f6d6d6"] }
+      "primary": { "role": "primary", "displayName": "Terminal Ink", "canonical": "#161614", "cssVar": "--color-ink", "tonalRamp": ["#161614", "#2e2e2a", "#45453f", "#63635a", "#808075", "#b6b6af", "#d6d6d2", "#f3f3f2"] },
+      "secondary": { "role": "neutral", "displayName": "Comment Gray", "canonical": "#6a6860", "cssVar": "--color-muted", "tonalRamp": ["#282724", "#46443f", "#63615a", "#807e74", "#9c9a91", "#b6b5af", "#d6d5d2", "#f3f3f2"] },
+      "tertiary": { "role": "primary", "displayName": "PR Purple", "canonical": "#8957e5", "cssVar": "--color-accent", "tonalRamp": ["#1e0a42", "#341273", "#4a19a3", "#6021d4", "#804ae3", "#a27bea", "#cab4f3", "#efe9fc"] },
+      "neutral": { "role": "neutral", "displayName": "Bone Paper", "canonical": "#f6f1e7", "cssVar": "--color-paper", "tonalRamp": ["#24221d", "#3d3a33", "#58544b", "#777268", "#9a958a", "#bfb9ad", "#ded8cc", "#f6f1e7"] },
+      "surface": { "role": "neutral", "displayName": "README Surface", "canonical": "#fbf6ea", "cssVar": "--color-surface", "tonalRamp": ["#26231c", "#403b30", "#5c5647", "#7c7563", "#a09883", "#c5bda8", "#e3dccb", "#fbf6ea"] },
+      "on-primary": { "role": "neutral", "displayName": "On-Fill Text", "canonical": "#fbf6ea", "cssVar": "--color-surface", "tonalRamp": ["#26231c", "#403b30", "#5c5647", "#7c7563", "#a09883", "#c5bda8", "#e3dccb", "#fbf6ea"] },
+      "accent-fill": { "role": "primary", "displayName": "PR Purple Fill", "canonical": "#7b4ad9", "cssVar": "--color-accent-fill", "note": "Built fill for the primary button. #fbf6ea on #8957e5 is about 4.3:1; on #7b4ad9 it clears 4.5:1.", "tonalRamp": ["#1e0d3f", "#35176e", "#4b219c", "#612aca", "#8152db", "#a381e4", "#cbb7f0", "#f0eafb"] },
+      "accent-deep": { "role": "primary", "displayName": "PR Purple Deep", "canonical": "#6a3bc7", "cssVar": "--color-accent-deep", "note": "Hover state of the primary button only.", "tonalRamp": ["#1f113c", "#361d67", "#4d2a93", "#6436be", "#835cd1", "#a588dd", "#ccbcec", "#f0ebf9"] },
+      "diff": { "role": "secondary", "displayName": "Diff Green", "canonical": "#116329", "cssVar": "--color-diff", "note": "Text of '+' diff lines, always on its own 7% tint rgba(17, 99, 41, 0.07). Named in the world, absent from DESIGN.md frontmatter.", "tonalRamp": ["#0b411b", "#116329", "#13712f", "#1ca143", "#4de078", "#7ce99c", "#b5f2c7", "#e9fbef"] },
+      "danger": { "role": "tertiary", "displayName": "Error Red", "canonical": "#b42318", "cssVar": "--color-danger", "note": "State only: invalid field border and error text.", "tonalRamp": ["#440d09", "#751710", "#a62016", "#b42318", "#e65246", "#ed8078", "#f5b7b2", "#fceae8"] }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero name only (Raleway 300, clamp 2.75rem to 4.5rem, line-height 1.08, -0.01em). A user decision; not for other headings." },
-      "h1": { "displayName": "H1", "purpose": "Page titles (Raleway 300, 40px, 1.15)." },
-      "h2": { "displayName": "H2", "purpose": "Section headings (Raleway 300, 32px, 1.2)." },
-      "h3": { "displayName": "H3", "purpose": "Sub-section headings (Raleway 500, 24px, 1.25)." },
-      "h4": { "displayName": "H4", "purpose": "Card and item titles (Raleway 500, 18px, 1.35)." },
-      "lead": { "displayName": "Lead", "purpose": "Role line and section intros (DM Sans 400, 18px, 1.6)." },
-      "body": { "displayName": "Body", "purpose": "Paragraphs (DM Sans 400, 15px, 1.7), text-wrap pretty." },
-      "small": { "displayName": "Small", "purpose": "Metadata and captions (DM Sans, 13px, 1.6) in the receded secondary tone." },
-      "label": { "displayName": "Label", "purpose": "Form labels (DM Sans 500, 12px) in #6B6560." },
-      "tiny": { "displayName": "Tiny", "purpose": "Smallest metadata (DM Sans 500, 11px, 1.4)." },
-      "mono": { "displayName": "Mono", "purpose": "Technology names only: the hero stack line and project card stack (Fira Code 400, 13px, 1.6)." },
-      "button": { "displayName": "Button", "purpose": "DM Sans 500; 12px sm, 14px md, 15px lg." }
+      "display": { "displayName": "Display", "purpose": "Hero name only. JetBrains Mono 700, clamp(2rem, 7vw, 3.25rem), line-height 1.1, -0.02em; the second word recedes to Comment Gray." },
+      "h1": { "displayName": "Heading (h1/h2/h3)", "purpose": "One step for page titles and section headings: JetBrains Mono 600, clamp(1.35rem, 3vw, 1.7rem), line-height 1.3, -0.01em, text-wrap balance." },
+      "h4": { "displayName": "Title (h4)", "purpose": "Card, service, timeline and chat-panel titles and the navbar wordmark: JetBrains Mono 600, 0.95rem, line-height 1.45." },
+      "body": { "displayName": "Body", "purpose": "All prose: IBM Plex Sans 400, 0.95rem, line-height 1.65, text-wrap pretty; secondary prose in Comment Gray, measure 46 to 60ch." },
+      "label": { "displayName": "Label / Small / Mono", "purpose": "Metadata, form labels, hostnames, stack lines, code-block filenames and small buttons: JetBrains Mono 0.72rem, 0.04em, Comment Gray. Chips and diff lines use the same size at 0.02em." }
     },
     "shadows": [],
     "borders": [
-      { "name": "border-default", "value": "1px solid rgba(168, 162, 158, 0.45)", "purpose": "Cards, chips, fields, .rule and .rule-b dividers, navbar bottom rule." },
-      { "name": "border-strong", "value": "1px solid #a8a29e", "purpose": "Secondary button outline; hover state of cards and fields." },
-      { "name": "border-focus", "value": "#57534e", "purpose": "Field focus border and the 2px focus-visible outline (offset 2px)." }
+      { "name": "border-default", "value": "1px solid rgba(106, 104, 96, 0.28)", "purpose": "Cards, chips, code block, .rule/.rule-b dividers, band edges, navbar bottom rule, timeline spine." },
+      { "name": "border-strong", "value": "1px solid rgba(106, 104, 96, 0.6)", "purpose": "Secondary button outline, field stroke, chat panel outline, scrollbar thumb." },
+      { "name": "border-hover", "value": "#161614", "purpose": "Hover on secondary buttons and fields." },
+      { "name": "border-accent", "value": "#8957e5", "purpose": "Link underline (1px, 2px on hover, offset 4px), card hover/focus border, field focus border, active nav underline." },
+      { "name": "focus-ring", "value": "2px solid #8957e5, offset 2px", "purpose": "Global :focus-visible outline." }
     ],
     "radii": [
-      { "name": "default", "value": "4px", "purpose": "Buttons, cards, chips, fields." },
-      { "name": "chat-panel", "value": "6px", "purpose": "Chat widget panel." },
-      { "name": "image-card", "value": "0", "purpose": "Project cards and images: square corners, no border, no overlay." }
+      { "name": "sm", "value": "4px", "purpose": "Chips, diff lines, chat message bubbles, scrollbar thumb." },
+      { "name": "md", "value": "6px", "purpose": "Buttons and fields." },
+      { "name": "lg", "value": "10px", "purpose": "Cards, the code block, the chat panel." }
     ],
     "motion": [
       { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Hero entrance easing." },
-      { "name": "hero-in", "value": "fade-up (opacity 0, translateY 16px) 0.6s ease-out-expo, delay = index * 0.1s + 0.05s", "purpose": "The single entrance animation, on the hero only; disabled under prefers-reduced-motion." },
-      { "name": "state-transition", "value": "0.2s on background-color, color, border-color", "purpose": "All hover responses on buttons, cards, fields and links. No transforms, no lifts." }
+      { "name": "hero-in", "value": "fade-up (opacity 0, translateY 16px) 0.6s ease-out-expo, delay = index * 0.1s + 0.05s", "purpose": "Staggered entrance on hero elements only; disabled under prefers-reduced-motion." },
+      { "name": "state-transition", "value": "0.2s on background-color, color, border-color (link: text-decoration-thickness)", "purpose": "All hover and focus responses on buttons, cards, fields, links and nav. No lifts." },
+      { "name": "stack-logo-hover", "value": "0.3s ease-out; grayscale and opacity 0.8 at rest, full color, opacity 1 and scale(1.1) on hover", "purpose": "Hero technology logo row only; reduced motion keeps scale at 1." },
+      { "name": "typing-pulse", "value": "Tailwind animate-pulse on three 6px ink dots, delays -0.4s / -0.2s / 0s", "purpose": "Chat assistant typing indicator." }
     ],
     "breakpoints": [
+      { "name": "sm", "value": "640px" },
       { "name": "md", "value": "768px" },
       { "name": "lg", "value": "1024px" },
-      { "name": "container", "value": "1280px" }
+      { "name": "container", "value": "1200px" }
     ],
     "layout": {
-      "grid": "12 columns, 24px column gap, container max 1280px with inline padding clamp(20px, 5vw, 64px)",
-      "sectionPadding": "clamp(72px, 10vw, 120px) vertical",
-      "rhythm": "warm page background alternating with sunken (#F5F4F1) bands",
-      "navbar": "fixed, 72px tall, warm background, 1px bottom rule on all pages"
+      "grid": "12 columns, 24px column gap; container max 1200px with inline padding clamp(20px, 5vw, 56px).",
+      "sectionPadding": "clamp(64px, 9vw, 112px) vertical (.section).",
+      "rhythm": "Bone Paper page alternating with README Surface bands (.band) edged by 1px default rules top and bottom.",
+      "navbar": "Fixed, 72px, Bone Paper with a 1px bottom rule; scroll-padding-top 88px.",
+      "hero": "Top-aligned with no min-height: padding-top clamp(128px, 14vw, 184px), bottom clamp(56px, 8vw, 96px); copy spans 8 to 9 of 12 columns; a ruled row of technology logos (32px tall at md and up, 24px at sm, 20px below; width auto) closes the hero."
     }
   },
   "components": [
@@ -64,100 +61,112 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Stone fill with white text; the one solid call to action per view (Ver proyectos).",
-      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Ver proyectos</a>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 4px; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 500; font-size: 15px; min-height: 48px; padding: 14px 28px; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; } .ds-btn-primary { background: #78716c; color: #fff; } .ds-btn-primary:hover { background: #57534e; } .ds-btn-primary:active { background: #44403c; } .ds-btn:focus-visible { outline: 2px solid #57534e; outline-offset: 2px; }"
+      "description": "The one filled PR Purple action per section (Ver proyectos, Descargar CV, Enviar, Cotizar). Fill is #7b4ad9 for contrast; hover deepens to #6a3bc7.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Ver proyectos <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7M8 7h9v9\"/></svg></a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 6px; font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-weight: 600; font-size: 0.95rem; min-height: 48px; padding: 12px 20px; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; } .ds-btn-primary { background: var(--color-accent-fill, #7b4ad9); color: var(--color-surface, #fbf6ea); } .ds-btn-primary:hover { background: var(--color-accent-deep, #6a3bc7); } .ds-btn:focus-visible { outline: 2px solid var(--color-accent, #8957e5); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Solid Terminal Ink control for persistent or repeated actions that must not compete with the section's purple: the floating chat launcher and the chat send button.",
+      "html": "<button class=\"ds-btn ds-btn-ink\" type=\"button\" aria-label=\"Enviar\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M3 20V4l19 8-19 8Zm2-3 11.85-5L5 7v3.5l6 1.5-6 1.5V17Z\"/></svg></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 6px; font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-weight: 600; font-size: 0.95rem; min-height: 42px; padding: 10px 12px; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; } .ds-btn-ink { background: var(--color-ink, #161614); color: var(--color-surface, #fbf6ea); } .ds-btn-ink:hover { background: #2e2e2a; } .ds-btn:focus-visible { outline: 2px solid var(--color-accent, #8957e5); outline-offset: 2px; }"
     },
     {
       "name": "Secondary Button",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Transparent with a strong 1px border; sits beside the primary and in the navbar (Hablemos, Contacto).",
+      "description": "Transparent outline beside the primary and in the navbar (Hablemos, Contacto); border goes to ink and fill to surface on hover.",
       "html": "<a class=\"ds-btn ds-btn-secondary\" href=\"#\">Hablemos</a>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 4px; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 500; font-size: 15px; min-height: 48px; padding: 14px 28px; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; } .ds-btn-secondary { background: transparent; color: #57534e; border-color: #a8a29e; } .ds-btn-secondary:hover { background: #f5f4f1; } .ds-btn:focus-visible { outline: 2px solid #57534e; outline-offset: 2px; }"
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: 6px; font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-weight: 600; font-size: 0.95rem; min-height: 48px; padding: 12px 20px; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; } .ds-btn-secondary { background: transparent; color: var(--color-ink, #161614); border-color: rgba(106, 104, 96, 0.6); } .ds-btn-secondary:hover { border-color: var(--color-ink, #161614); background: var(--color-surface, #fbf6ea); } .ds-btn:focus-visible { outline: 2px solid var(--color-accent, #8957e5); outline-offset: 2px; }"
     },
     {
       "name": "Ghost Button",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "Text-only control in the receded tone (language toggle); darkens on hover.",
+      "description": "Text-only small control in Comment Gray (language toggle); darkens to ink on hover.",
       "html": "<button class=\"ds-btn ds-btn-ghost\" type=\"button\">EN</button>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid transparent; border-radius: 4px; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 500; font-size: 12px; min-height: 32px; padding: 6px 16px; cursor: pointer; transition: background-color .2s, color .2s; } .ds-btn-ghost { background: transparent; color: #6b6560; } .ds-btn-ghost:hover { color: #57534e; } .ds-btn:focus-visible { outline: 2px solid #57534e; outline-offset: 2px; }"
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid transparent; border-radius: 6px; font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-weight: 600; font-size: 0.72rem; min-height: 34px; padding: 6px 14px; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; } .ds-btn-ghost { background: transparent; color: var(--color-muted, #6a6860); } .ds-btn-ghost:hover { color: var(--color-ink, #161614); } .ds-btn:focus-visible { outline: 2px solid var(--color-accent, #8957e5); outline-offset: 2px; }"
     },
     {
       "name": "Chip",
       "kind": "chip",
       "refersTo": "chip",
-      "description": "Feature tag on project cards: 1px border, 4px radius, no fill.",
-      "html": "<span class=\"ds-chip\">Panel autogestionable</span>",
-      "css": ".ds-chip { display: inline-block; border: 1px solid rgba(168,162,158,.45); border-radius: 4px; padding: 3px 10px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 13px; line-height: 1.5; color: #6b6560; }"
+      "description": "Mono tag with a 1px default border and 4px corners, no fill (blog post tags).",
+      "html": "<span class=\"ds-chip\">desarrollo web</span>",
+      "css": ".ds-chip { display: inline-block; border: 1px solid rgba(106, 104, 96, 0.28); border-radius: 4px; padding: 2px 8px; font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-size: 0.72rem; letter-spacing: 0.02em; line-height: 1.6; color: var(--color-muted, #6a6860); }"
+    },
+    {
+      "name": "Diff List",
+      "kind": "custom",
+      "refersTo": "diff-list",
+      "description": "Signature README device: project and service features as green '+' diff lines (Diff Green on a 7% green tint, 4px corners). The '+' is decorative and hidden from assistive tech.",
+      "html": "<ul class=\"ds-diff-list\"><li class=\"ds-diff\">Panel autogestionable</li><li class=\"ds-diff\">Catálogo con filtros</li><li class=\"ds-diff\">Formulario a WhatsApp</li></ul>",
+      "css": ".ds-diff-list { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; list-style: none; margin: 0; padding: 0; } .ds-diff { font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-size: 0.72rem; letter-spacing: 0.02em; line-height: 1.6; color: var(--color-diff, #116329); background: rgba(17, 99, 41, 0.07); border-radius: 4px; padding: 3px 10px; } .ds-diff::before { content: '+ ' / ''; font-weight: 600; }"
+    },
+    {
+      "name": "Code Block (stack.md)",
+      "kind": "custom",
+      "refersTo": "code-block",
+      "description": "Signature README device: the stack rendered as a stack.md file, surface fill, 10px corners, a ruled filename bar in label type and a two-column mono list.",
+      "html": "<div class=\"ds-code\"><p class=\"ds-code-name\">stack.md</p><dl><dt>Frontend</dt><dd>Next.js · Astro · TypeScript</dd><dt>Contenido</dt><dd>Sanity · Supabase</dd><dt>Backend</dt><dd>Django · Flask · PostgreSQL</dd></dl></div>",
+      "css": ".ds-code { background: var(--color-surface, #fbf6ea); border: 1px solid rgba(106, 104, 96, 0.28); border-radius: 10px; overflow: hidden; font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-size: 0.95rem; line-height: 1.7; color: var(--color-ink, #161614); } .ds-code-name { margin: 0; padding: 10px 20px; border-bottom: 1px solid rgba(106, 104, 96, 0.28); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--color-muted, #6a6860); } .ds-code dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 24px; margin: 0; padding: 16px 20px; } .ds-code dt { color: var(--color-muted, #6a6860); } .ds-code dd { margin: 0; }"
     },
     {
       "name": "Text Field",
       "kind": "input",
       "refersTo": "field",
-      "description": "Contact input: sunken fill, 1px border that strengthens on hover and turns Stone Dark on focus; danger border when invalid.",
-      "html": "<input class=\"ds-field\" placeholder=\"Tu correo\" />",
-      "css": ".ds-field { width: 100%; box-sizing: border-box; background: #f5f4f1; border: 1px solid rgba(168,162,158,.45); border-radius: 4px; padding: 10px 14px; font: inherit; font-family: 'DM Sans', system-ui, sans-serif; font-size: 15px; color: #57534e; transition: border-color .2s; } .ds-field::placeholder { color: #6b6560; opacity: 1; } .ds-field:hover { border-color: #a8a29e; } .ds-field:focus { outline: none; border-color: #57534e; } .ds-field:focus-visible { outline: 2px solid #57534e; outline-offset: 2px; } .ds-field[aria-invalid='true'] { border-color: #dc2626; }"
+      "description": "Paper fill inside surface bands, strong 1px stroke, 6px corners; ink on hover, PR Purple on focus with the 2px ring, Error Red when invalid.",
+      "html": "<label class=\"ds-label\" for=\"ds-f\">Correo electrónico</label><input id=\"ds-f\" class=\"ds-field\" placeholder=\"juan@ejemplo.com\" />",
+      "css": ".ds-label { display: block; margin-bottom: 6px; font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--color-muted, #6a6860); } .ds-field { width: 100%; background: var(--color-paper, #f6f1e7); border: 1px solid rgba(106, 104, 96, 0.6); border-radius: 6px; padding: 10px 14px; font-family: var(--font-body, 'IBM Plex Sans', system-ui, sans-serif); font-size: 0.95rem; color: var(--color-ink, #161614); transition: border-color .2s; } .ds-field::placeholder { color: var(--color-muted, #6a6860); opacity: 1; } .ds-field:hover { border-color: var(--color-ink, #161614); } .ds-field:focus { outline: none; border-color: var(--color-accent, #8957e5); } .ds-field:focus-visible { outline: 2px solid var(--color-accent, #8957e5); outline-offset: 2px; } .ds-field[aria-invalid='true'] { border-color: var(--color-danger, #b42318); }"
     },
     {
       "name": "Project Card",
       "kind": "card",
-      "refersTo": "project-card",
-      "description": "Signature card: raised white, square corners, unadorned 16:10 screenshot, H4 title, host, summary, chips and a Fira Code stack line. Hover only strengthens the border.",
-      "html": "<a class=\"ds-card\" href=\"#\"><div class=\"ds-media\"></div><div class=\"ds-body\"><h3>Décima Propiedades</h3><p class=\"ds-host\">decimapropiedades.cl</p><p class=\"ds-sum\">Sitio inmobiliario con panel de contenido.</p><span class=\"ds-chip\">Catálogo</span><p class=\"ds-stack\">Next.js · Tailwind · Sanity</p></div></a>",
-      "css": ".ds-card { display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(168,162,158,.45); border-radius: 0; text-decoration: none; color: #57534e; font-family: 'DM Sans', system-ui, sans-serif; font-size: 15px; line-height: 1.7; transition: border-color .2s; } .ds-card:hover, .ds-card:focus-visible { border-color: #a8a29e; } .ds-card:focus-visible { outline: 2px solid #57534e; outline-offset: 2px; } .ds-media { aspect-ratio: 16/10; background: #f5f4f1; } .ds-body { padding: 36px; display: flex; flex-direction: column; } .ds-card h3 { font-family: Raleway, system-ui, sans-serif; font-weight: 500; font-size: 18px; line-height: 1.35; color: #57534e; margin: 0; } .ds-host { font-size: 13px; line-height: 1.6; color: #6b6560; margin: 0 0 16px; } .ds-sum { color: #6b6560; margin: 0 0 20px; } .ds-chip { align-self: flex-start; border: 1px solid rgba(168,162,158,.45); border-radius: 4px; padding: 3px 10px; font-size: 13px; color: #6b6560; } .ds-stack { font-family: 'Fira Code', ui-monospace, monospace; font-size: 13px; line-height: 1.6; color: #57534e; margin: 24px 0 0; }"
+      "refersTo": "card",
+      "description": "Surface card, 10px corners, 1px default border that turns PR Purple on hover/focus; top-anchored 16:10 screenshot, h4 title, mono hostname, muted summary, diff-line features and a mono stack line pinned to the bottom.",
+      "html": "<a class=\"ds-card\" href=\"#\"><div class=\"ds-media\"></div><div class=\"ds-body\"><h3>Décima Propiedades</h3><p class=\"ds-host\">decimapropiedades.cl</p><p class=\"ds-sum\">Sitio inmobiliario con panel de contenido.</p><ul class=\"ds-diffs\"><li>Catálogo de propiedades</li><li>Panel autogestionable</li></ul><p class=\"ds-stack\">Next.js · Tailwind · Sanity</p></div></a>",
+      "css": ".ds-card { display: flex; flex-direction: column; overflow: hidden; background: var(--color-surface, #fbf6ea); border: 1px solid rgba(106, 104, 96, 0.28); border-radius: 10px; text-decoration: none; color: var(--color-ink, #161614); font-family: var(--font-body, 'IBM Plex Sans', system-ui, sans-serif); font-size: 0.95rem; line-height: 1.65; transition: border-color .2s; } .ds-card:hover, .ds-card:focus-visible { border-color: var(--color-accent, #8957e5); } .ds-card:focus-visible { outline: 2px solid var(--color-accent, #8957e5); outline-offset: 2px; } .ds-media { aspect-ratio: 16/10; background: #ded8cc; } .ds-body { display: flex; flex-direction: column; padding: 24px; } .ds-card h3 { margin: 0; font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-weight: 600; font-size: 0.95rem; line-height: 1.45; } .ds-host, .ds-stack { font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--color-muted, #6a6860); } .ds-host { margin: 0 0 16px; } .ds-sum { margin: 0 0 20px; color: var(--color-muted, #6a6860); } .ds-diffs { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; list-style: none; margin: 0 0 24px; padding: 0; } .ds-diffs li { font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-size: 0.72rem; letter-spacing: 0.02em; line-height: 1.6; color: var(--color-diff, #116329); background: rgba(17, 99, 41, 0.07); border-radius: 4px; padding: 3px 10px; } .ds-diffs li::before { content: '+ ' / ''; font-weight: 600; } .ds-stack { margin: auto 0 0; }"
     },
     {
       "name": "Navigation Bar",
       "kind": "nav",
       "refersTo": "nav",
-      "description": "Flat warm bar, 72px, 1px bottom rule on every page; the current page carries a 1px Stone Dark underline.",
-      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\">Raimundo del Río</a><ul><li><a class=\"ds-current\" href=\"#\">Proyectos</a></li><li><a href=\"#\">Servicios</a></li><li><a href=\"#\">Sobre mí</a></li><li><a href=\"#\">Blog</a></li></ul><a class=\"ds-nav-cta\" href=\"#\">Contacto</a></header>",
-      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; padding: 0 40px; background: #faf9f6; border-bottom: 1px solid rgba(168,162,158,.45); font-family: 'DM Sans', system-ui, sans-serif; font-size: 15px; } .ds-brand { font-family: Raleway, system-ui, sans-serif; font-size: 18px; font-weight: 500; color: #57534e; text-decoration: none; } .ds-nav ul { display: flex; gap: 36px; list-style: none; margin: 0; padding: 0; } .ds-nav li a { display: inline-block; padding: 4px 0; color: #57534e; text-decoration: none; border-bottom: 1px solid transparent; transition: color .2s; } .ds-nav li a:hover { color: #44403c; } .ds-nav li a.ds-current { color: #44403c; font-weight: 500; border-bottom-color: #57534e; } .ds-nav-cta { border: 1px solid #a8a29e; border-radius: 4px; padding: 6px 16px; font-size: 12px; font-weight: 500; color: #57534e; text-decoration: none; transition: background-color .2s; } .ds-nav-cta:hover { background: #f5f4f1; }"
-    },
-    {
-      "name": "Hero Block",
-      "kind": "custom",
-      "refersTo": "hero",
-      "description": "Left-aligned on the 12-column grid: display name with a receded second word, lead role line, primary and secondary CTAs, and a ruled footer with the Fira Code stack and a green availability dot.",
-      "html": "<section class=\"ds-hero\"><h1>Raimundo <span>del Río</span></h1><p class=\"ds-lead\">Desarrollador web full-stack y fundador de Chilisites</p><a class=\"ds-cta\" href=\"#\">Ver proyectos</a><div class=\"ds-foot\"><ul><li>Next.js</li><li>Astro</li><li>Sanity</li></ul><p><i></i>Disponible para nuevos proyectos</p></div></section>",
-      "css": ".ds-hero { padding: 96px 40px 64px; background: #faf9f6; color: #57534e; font-family: 'DM Sans', system-ui, sans-serif; font-size: 15px; line-height: 1.7; } .ds-hero h1 { font-family: Raleway, system-ui, sans-serif; font-weight: 300; font-size: clamp(2.75rem, 7.5vw, 4.5rem); line-height: 1.08; letter-spacing: -.01em; margin: 0 0 24px; color: #57534e; } .ds-hero h1 span { color: #6b6560; } .ds-lead { font-size: 18px; line-height: 1.6; margin: 0 0 40px; max-width: 46ch; } .ds-cta { display: inline-flex; align-items: center; min-height: 48px; padding: 14px 28px; border-radius: 4px; background: #78716c; color: #fff; font-weight: 500; text-decoration: none; transition: background-color .2s; } .ds-cta:hover { background: #57534e; } .ds-cta:focus-visible { outline: 2px solid #57534e; outline-offset: 2px; } .ds-foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px 32px; margin-top: 64px; padding-top: 24px; border-top: 1px solid rgba(168,162,158,.45); } .ds-foot ul { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; font-family: 'Fira Code', ui-monospace, monospace; font-size: 13px; color: #6b6560; } .ds-foot p { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 13px; color: #6b6560; } .ds-foot i { width: 8px; height: 8px; border-radius: 50%; background: #65a30d; }"
+      "description": "Fixed 72px Bone Paper bar with a 1px bottom rule; h4 wordmark, ink links with a 1px PR Purple underline on the current page, ghost language toggle and small secondary Contacto.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"#\">Raimundo del Río</a><ul><li><a aria-current=\"page\" href=\"#\">Proyectos</a></li><li><a href=\"#\">Servicios</a></li><li><a href=\"#\">Sobre mí</a></li><li><a href=\"#\">Blog</a></li></ul><a class=\"ds-nav-cta\" href=\"#\">Contacto</a></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; padding: 0 40px; background: var(--color-paper, #f6f1e7); border-bottom: 1px solid rgba(106, 104, 96, 0.28); font-family: var(--font-body, 'IBM Plex Sans', system-ui, sans-serif); font-size: 0.95rem; color: var(--color-ink, #161614); } .ds-brand { font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-size: 0.95rem; font-weight: 600; color: inherit; text-decoration: none; } .ds-nav ul { display: flex; gap: 36px; list-style: none; margin: 0; padding: 0; } .ds-nav li a { display: inline-block; padding: 4px 0; color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; } .ds-nav li a[aria-current='page'] { font-weight: 500; border-bottom-color: var(--color-accent, #8957e5); } .ds-nav a:focus-visible { outline: 2px solid var(--color-accent, #8957e5); outline-offset: 2px; } .ds-nav-cta { display: inline-flex; align-items: center; min-height: 34px; padding: 6px 14px; border: 1px solid rgba(106, 104, 96, 0.6); border-radius: 6px; font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, monospace); font-size: 0.72rem; font-weight: 600; color: inherit; text-decoration: none; transition: background-color .2s, border-color .2s; } .ds-nav-cta:hover { border-color: var(--color-ink, #161614); background: var(--color-surface, #fbf6ea); }"
     }
   ],
   "narrative": {
-    "northStar": "The Ruled Grid",
-    "overview": "A quiet portfolio where an exact 12-column grid and light Raleway type do all the work, and the real work (nine shipped sites with their stack) sits at the center. The palette is warm white, stone and sage with no accent color; hierarchy comes from weight, size, 1px rules and background steps between warm and sunken bands.\n\nEverything is flat: zero shadows, 1px borders, 4px corners, and screenshots shown unadorned with square corners. Motion is one fade-up on the hero and 0.2s color and border responses elsewhere. Green, amber and red exist only for functional states; the one live use is the availability dot in the hero. Secondary text is #6B6560 rather than ZenGrid's #78716C because #78716C fails 4.5:1 on the sunken band; Stone #78716C survives only as the primary button fill and non-text.",
+    "northStar": "OSS Terminal",
+    "overview": "An open-source docs palette: bone-paper surface, diff-green additions, PR-purple accent.\n\nAs built, the portfolio reads like a well-kept repository: JetBrains Mono carries every heading, label and control, IBM Plex Sans carries the prose, and the work is presented through README devices (features as green '+' diff lines, the stack as a stack.md code block). The system is flat: no shadows and no gradients; depth is a 1px border, a 4/6/10px corner and the step between Bone Paper and README Surface bands. PR Purple is reserved: one filled action per section, plus focus rings, link underlines, card hover borders and the active nav underline; every other control is ink or outline.",
     "keyCharacteristics": [
-      "No accent color: Warm White #FAF9F6, raised #FFFFFF, sunken #F5F4F1, Stone text ramp, Sage for borders only.",
-      "Raleway 300 for H1/H2 and the hero name, Raleway 500 for H3/H4, DM Sans for everything else, Fira Code for technology names only.",
-      "Flat: zero shadows, 1px borders (Sage at 45% default, #A8A29E strong, #57534E focus), 4px radii, square image cards.",
-      "12-column grid, 24px gutters, 1280px container, section padding clamp(72px, 10vw, 120px), warm and sunken bands alternate.",
-      "One entrance (hero fade-up 16px, 0.6s, reduced-motion safe); all other motion is a 0.2s color or border change."
+      "Palette: Bone Paper #f6f1e7 page, README Surface #fbf6ea bands and cards, Terminal Ink #161614 text, Comment Gray #6a6860 secondary, PR Purple #8957e5 accent (fill #7b4ad9, hover #6a3bc7), Diff Green #116329, Error Red #b42318.",
+      "Four-step type ramp: display 3.25rem mono 700, heading 1.7rem mono 600, title 0.95rem mono 600, body 0.95rem IBM Plex Sans 1.65, label 0.72rem mono 0.04em.",
+      "Flat: no shadows, no gradients; 1px borders at 28% and 60% Comment Gray; radii 4px (chips, diff lines), 6px (buttons, fields), 10px (cards, code block, chat panel).",
+      "README devices: '+' diff lines for features, stack.md code block for the stack.",
+      "12-column grid, 24px gutters, 1200px container, section padding clamp(64px, 9vw, 112px), paper and surface bands alternate.",
+      "Motion: hero staggered fade-up (16px, 0.6s, 0.1s steps), chat typing pulse, 0.2s color and border transitions; reduced motion respected."
     ],
     "rules": [
-      { "name": "The Stone Text Rule", "body": "Text and headings are Stone Dark #57534E. Secondary and metadata text is #6B6560, which holds 4.5:1 on Warm White and on the sunken band. Sage #A8A29E is never text; Stone #78716C is only the primary button fill and non-text marks.", "section": "colors" },
-      { "name": "The State-Only Color Rule", "body": "Green, amber and red appear only for functional states (availability dot, invalid field, errors). No decorative accent.", "section": "colors" },
-      { "name": "The Display Once Rule", "body": "The .display size (Raleway 300, up to 72px) belongs to the hero name alone. Every other heading uses the H1 to H4 scale.", "section": "typography" },
-      { "name": "The Mono Means Technology Rule", "body": "Fira Code sets technology and stack names only, never decoration or generic labels.", "section": "typography" },
-      { "name": "The Flat Rule", "body": "No shadows, glows or gradients. Depth is a 1px border or a step between warm, raised and sunken. Hover changes a border or background, never position.", "section": "elevation" },
-      { "name": "The Bare Image Rule", "body": "Project screenshots have square corners, no border, no overlay and no tint.", "section": "elevation" }
+      { "name": "The Single-Accent Rule", "body": "Exactly one filled PR Purple button per section, filled at #7b4ad9 so #fbf6ea text clears 4.5:1 (on #8957e5 it is about 4.3:1). #8957e5 itself is for focus rings, link underlines, card hover borders and the active nav underline. Everything else is ink or outline; the floating chat launcher and chat send are ink.", "section": "colors" },
+      { "name": "The Diff Green Rule", "body": "Diff Green #116329 appears only as the text of '+' diff lines on its own 7% green tint. It marks what was built, never decoration or status.", "section": "colors" },
+      { "name": "The Mono Structure Rule", "body": "JetBrains Mono sets headings, labels, metadata, buttons and code; IBM Plex Sans sets paragraphs. Four sizes only: 3.25rem, 1.7rem, 0.95rem, 0.72rem.", "section": "typography" },
+      { "name": "The Flat Rule", "body": "No shadows and no gradients. Depth is a 1px border or the step between paper and surface; hover changes color or border, never elevation.", "section": "elevation" }
     ],
     "dos": [
-      "Do build on the 12-column grid with 24px gutters and left-align large text blocks.",
-      "Do set text in #57534E and secondary or metadata text in #6B6560.",
-      "Do use Sage (#A8A29E) for borders and dividers only, at 45% for default and full for strong.",
-      "Do separate sections with vertical space clamp(72px, 10vw, 120px) and alternate warm and sunken bands.",
-      "Do use 4px radii (6px for the chat panel) and Stone primary, bordered secondary, ghost buttons in sm, md and lg sizes.",
-      "Do keep the hero fade-up as the only entrance and honor prefers-reduced-motion."
+      "Do use Tertiary for exactly one action per screen.",
+      "Do let Neutral carry the composition — negative space is a feature.",
+      "Do fill the one primary action per section with #7b4ad9 and keep #8957e5 for rings, underlines and hover borders.",
+      "Do present shipped features as '+' diff lines and the stack as a stack.md code block.",
+      "Do keep radii to 4px (chips, diff lines), 6px (buttons, fields) and 10px (cards, code block, chat panel)."
     ],
     "donts": [
-      "Don't add shadows, glows, gradients or overlays.",
-      "Don't use Sage or Stone #78716C for text.",
-      "Don't introduce an accent color; semantic colors are for states only.",
-      "Don't use the display size or weight 300 below H2 outside the hero name.",
-      "Don't round or border screenshots.",
-      "Don't fall back to the default dev-portfolio look: dark page, neon accent, decorative monospace, icon-topped cards."
+      "Don't introduce gradients. This system is flat on purpose.",
+      "Don't mix Tertiary with alternate accents; the single-accent rule is load-bearing.",
+      "Don't add shadows; depth is borders and the paper/surface step.",
+      "Don't use purple fills for persistent or repeated controls; they are ink."
     ]
   }
 }

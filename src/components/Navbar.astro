@@ -12,9 +12,9 @@ const links = [
 ];
 ---
 
-<header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-warm rule-b">
+<header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-paper rule-b">
     <nav class="container-x h-[72px] flex items-center justify-between gap-6" aria-label="Principal">
-        <a href="/" class="font-[var(--font-headline)] text-[18px] font-medium text-stone-dark">
+        <a href="/" class="h4">
             Raimundo del Río
         </a>
 
@@ -27,8 +27,8 @@ const links = [
                             aria-current={l.key === active ? "page" : undefined}
                             data-i18n={`nav.${l.key}`}
                             class:list={[
-                                "py-1 border-b transition-colors hover:text-stone-deep",
-                                l.key === active ? "border-stone-dark text-stone-deep font-medium" : "border-transparent text-stone-dark",
+                                "py-1 border-b transition-colors hover:text-ink",
+                                l.key === active ? "border-accent text-ink font-medium" : "border-transparent text-ink",
                             ]}
                         >
                             {l.label}
@@ -44,7 +44,7 @@ const links = [
             <button
                 id="menu-toggle"
                 type="button"
-                class="md:hidden p-2 -mr-2 text-stone-dark"
+                class="md:hidden p-2 -mr-2 text-ink"
                 aria-label="Abrir menú"
                 aria-expanded="false"
                 aria-controls="mobile-menu"
@@ -54,12 +54,12 @@ const links = [
         </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden md:hidden bg-warm rule">
+    <div id="mobile-menu" class="hidden md:hidden bg-paper rule">
         <ul class="container-x py-3 flex flex-col">
             {
                 [...links, { label: "Contacto", href: "/#contact", key: "contact" }].map((l) => (
                     <li>
-                        <a href={l.href} data-i18n={`nav.${l.key}`} class="block py-3 text-stone-dark rule-b">
+                        <a href={l.href} data-i18n={`nav.${l.key}`} class="block py-3 text-ink rule-b">
                             {l.label}
                         </a>
                     </li>

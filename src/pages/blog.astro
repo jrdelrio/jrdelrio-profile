@@ -26,14 +26,14 @@ const fmt = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "short", y
             <div class="container-x grid-12">
                 <div class="col-span-12 md:col-span-8">
                     <h1 class="h1 mb-4" data-i18n="blog.heading">Notas de desarrollo</h1>
-                    <p class="lead text-stone-text max-w-[56ch]" data-i18n="blog.intro">
+                    <p class="text-muted max-w-[56ch]" data-i18n="blog.intro">
                         Escribo sobre lo que aprendo construyendo sitios y productos: arquitectura, rendimiento, SEO y flujo de trabajo.
                     </p>
                 </div>
             </div>
         </header>
 
-        <section class="pb-[clamp(72px,10vw,120px)]">
+        <section class="pb-[clamp(64px,9vw,112px)]">
             <div class="container-x">
                 <div class="max-w-[960px]">
                     {
@@ -45,16 +45,16 @@ const fmt = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "short", y
                                             href={post.url}
                                             target="_blank"
                                             rel="noopener"
-                                            class="group grid md:grid-cols-[minmax(0,1fr)_200px] gap-6 py-8 items-center hover:bg-sunken transition-colors"
+                                            class="group grid md:grid-cols-[minmax(0,1fr)_200px] gap-6 py-8 items-center hover:bg-surface transition-colors"
                                         >
                                             <div>
-                                                <p class="small text-stone-text mb-2">
+                                                <h2 class="h4 mb-1">{post.title}</h2>
+                                                <p class="small text-muted mb-3">
                                                     <time datetime={post.date.toISOString()}>{fmt.format(post.date)}</time>
                                                     <span aria-hidden="true"> · </span>
                                                     {post.readMinutes} min
                                                 </p>
-                                                <h2 class="h4 mb-3">{post.title}</h2>
-                                                <p class="text-stone-text max-w-[62ch]">{post.excerpt}</p>
+                                                <p class="text-muted max-w-[62ch]">{post.excerpt}</p>
                                                 {post.tags.length > 0 && (
                                                     <ul class="mt-4 flex flex-wrap gap-2">
                                                         {post.tags.map((tag) => (
@@ -80,12 +80,12 @@ const fmt = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "short", y
                             </ul>
                         ) : (
                             <div class="card p-9">
-                                <p class="text-stone-text" data-i18n="blog.empty">No pude cargar los artículos en este momento.</p>
+                                <p class="text-muted" data-i18n="blog.empty">No pude cargar los artículos en este momento.</p>
                             </div>
                         )
                     }
 
-                    <a href={MEDIUM_PROFILE} target="_blank" rel="noopener" class="btn btn-secondary btn-lg mt-10">
+                    <a href={MEDIUM_PROFILE} target="_blank" rel="noopener" class="btn btn-primary btn-lg mt-10">
                         <span data-i18n="blog.all">Ver todos en Medium</span>
                         <span class="material-symbols-outlined text-[18px]" aria-hidden="true">arrow_outward</span>
                     </a>

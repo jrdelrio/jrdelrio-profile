@@ -4,8 +4,8 @@ import { services } from "../data/services";
 
 <section class="section band" id="services">
     <div class="container-x">
-        <div class="flex flex-wrap items-end justify-between gap-6 mb-14">
-            <h2 class="h2 max-w-[20ch]" data-i18n="services.heading">Todo lo que necesita tu web</h2>
+        <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3 mb-14">
+            <h2 class="h2" data-i18n="services.heading">Todo lo que necesita tu web</h2>
             <a href="/servicios" class="link">
                 <span data-i18n="services.viewall">Ver todos</span>
             </a>
@@ -16,7 +16,7 @@ import { services } from "../data/services";
                 services.map((s) => (
                     <li class="grid-12 gap-y-2 py-8 rule-b">
                         <h3 class="h4 col-span-12 md:col-span-4" data-i18n={`svc.${s.key}.title`}>{s.title.es}</h3>
-                        <p class="text-stone-text col-span-12 md:col-span-7 md:col-start-6 max-w-[62ch]" data-i18n={`svc.${s.key}.desc`}>
+                        <p class="text-muted col-span-12 md:col-span-7 md:col-start-6 max-w-[62ch]" data-i18n={`svc.${s.key}.desc`}>
                             {s.desc.es}
                         </p>
                     </li>

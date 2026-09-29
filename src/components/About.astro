@@ -21,10 +21,11 @@ const timeline = [
 ];
 
 const stack = [
-    { key: "front", label: "Frontend", items: ["Next.js", "Astro", "React", "Tailwind"] },
+    { key: "front", label: "Frontend", items: ["Next.js", "Astro", "React", "TypeScript", "Tailwind"] },
     { key: "cms", label: "Contenido", items: ["Sanity", "Shopify", "WordPress"] },
-    { key: "back", label: "Backend y datos", items: ["Django", "Flask", "PostgreSQL", "Supabase"] },
+    { key: "back", label: "Backend y datos", items: ["Django", "Flask", "PostgreSQL", "Supabase", "Docker"] },
     { key: "ops", label: "Correo y operación", items: ["Resend", "Zoho"] },
+    { key: "ai", label: "Desarrollo con IA", items: ["Claude"] },
 ];
 ---
 
@@ -54,7 +55,7 @@ const stack = [
                 <h2 class="h2 mb-6" data-i18n="about.heading">
                     Construyo sitios que se ven bien, cargan rápido y ayudan a vender.
                 </h2>
-                <p class="text-stone-text max-w-[60ch] mb-16" data-i18n="about.body">
+                <p class="text-muted max-w-[60ch] mb-16" data-i18n="about.body">
                     Soy desarrollador web full-stack. Me hago cargo del proyecto completo: diseño, desarrollo, contenido autogestionable y todo lo que hace falta para que el sitio quede funcionando.
                 </p>
 
@@ -62,25 +63,28 @@ const stack = [
                     {
                         timeline.map((t) => (
                             <li class="relative pl-8 pb-10 last:pb-0">
-                                <span class="absolute -left-[4px] top-[9px] w-[7px] h-[7px] bg-stone" aria-hidden="true" />
+                                <span class="absolute -left-[4px] top-[9px] w-[7px] h-[7px] bg-ink" aria-hidden="true" />
                                 <h3 class="h4 mb-2" data-i18n={`about.t.${t.key}.place`}>{t.place}</h3>
-                                <p class="text-stone-text max-w-[60ch]" data-i18n={`about.t.${t.key}.body`}>{t.body}</p>
+                                <p class="text-muted max-w-[60ch]" data-i18n={`about.t.${t.key}.body`}>{t.body}</p>
                             </li>
                         ))
                     }
                 </ol>
 
-                <h3 class="h4 mb-6" data-i18n="about.stack_label">Stack con el que trabajo</h3>
-                <dl class="grid sm:grid-cols-2 gap-x-10 gap-y-7">
-                    {
-                        stack.map((g) => (
-                            <div class="rule pt-4">
-                                <dt class="label mb-1" data-i18n={`about.stack.${g.key}`}>{g.label}</dt>
-                                <dd class="mono text-stone-dark">{g.items.join(" · ")}</dd>
-                            </div>
-                        ))
-                    }
-                </dl>
+                <h3 class="h4 mb-4" data-i18n="about.stack_label">Stack con el que trabajo</h3>
+                <div class="code-block overflow-hidden">
+                    <p class="label px-5 py-2.5 rule-b" aria-hidden="true">stack.md</p>
+                    <dl class="px-5 py-4 grid grid-cols-1 sm:grid-cols-[max-content_1fr] gap-x-6 gap-y-1.5">
+                        {
+                            stack.map((g) => (
+                                <>
+                                    <dt class="text-muted" data-i18n={`about.stack.${g.key}`}>{g.label}</dt>
+                                    <dd class="text-ink mb-2 sm:mb-0">{g.items.join(" · ")}</dd>
+                                </>
+                            ))
+                        }
+                    </dl>
+                </div>
             </div>
         </div>
     </div>
