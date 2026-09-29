@@ -142,7 +142,7 @@ export default function ChatWidget() {
                                 <p
                                     className={
                                         m.role === "user"
-                                            ? "px-4 py-2.5 rounded max-w-[85%] bg-ink text-surface whitespace-pre-line"
+                                            ? "px-4 py-2.5 rounded max-w-[85%] bg-accent-fill text-surface whitespace-pre-line"
                                             : "px-4 py-2.5 rounded max-w-[85%] bg-surface border border-[color:var(--border-default)] text-ink whitespace-pre-line"
                                     }
                                 >
@@ -154,9 +154,9 @@ export default function ChatWidget() {
                             <div className="flex justify-start" aria-label="…">
                                 <p className="px-4 py-3 rounded bg-surface border border-[color:var(--border-default)]">
                                     <span className="inline-flex gap-1">
-                                        <span className="w-1.5 h-1.5 bg-ink rounded-full animate-pulse [animation-delay:-0.4s]"></span>
-                                        <span className="w-1.5 h-1.5 bg-ink rounded-full animate-pulse [animation-delay:-0.2s]"></span>
-                                        <span className="w-1.5 h-1.5 bg-ink rounded-full animate-pulse"></span>
+                                        <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse [animation-delay:-0.4s]"></span>
+                                        <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse [animation-delay:-0.2s]"></span>
+                                        <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse"></span>
                                     </span>
                                 </p>
                             </div>
@@ -179,7 +179,7 @@ export default function ChatWidget() {
                             type="button"
                             onClick={send}
                             disabled={loading || !input.trim()}
-                            className="btn btn-ink btn-md !px-3 shrink-0"
+                            className="btn btn-primary btn-md !px-3 shrink-0"
                             aria-label={t.send}
                         >
                             <span className="material-symbols-outlined text-[20px]" aria-hidden="true">send</span>
@@ -189,7 +189,7 @@ export default function ChatWidget() {
             )}
 
             <button
-                className="btn btn-ink w-12 h-12 !p-0"
+                className="btn btn-primary w-12 h-12 !p-0"
                 type="button"
                 onClick={() => setOpen((o) => !o)}
                 aria-label={open ? t.close : t.open}
