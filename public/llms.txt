@@ -1,0 +1,14 @@
+# Raimundo del Río
+
+> Desarrollador web full-stack chileno y fundador de Chilisites. Diseña y construye sitios y plataformas web a medida con Next.js, Astro y Sanity, y se encarga de dominio, correos y hosting.
+
+## Páginas
+- [Inicio](/): presentación, servicios y trabajos seleccionados.
+- [Proyectos](/proyectos): sitios reales en producción y el stack de cada uno.
+- [Servicios](/servicios): diseño y desarrollo web, contenido autogestionable, hosting, backend y marketing digital.
+- [Blog](/blog): notas sobre desarrollo, arquitectura frontend, rendimiento y SEO.
+
+## Perfiles
+- [LinkedIn](https://www.linkedin.com/in/jrdelriod/)
+- [GitHub](https://github.com/jrdelrio)
+- [Medium](https://medium.com/@jrdelriodom)

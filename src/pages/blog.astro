@@ -18,8 +18,17 @@ const fmt = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "short", y
 
 <Layout
     active="blog"
-    title="Blog | Raimundo del Río"
-    description="Artículos sobre desarrollo web, arquitectura frontend, SEO y buenas prácticas, escritos por Raimundo del Río."
+    title="Blog de desarrollo web y SEO | Raimundo del Río"
+    description="Artículos sobre desarrollo web, arquitectura frontend, rendimiento y SEO técnico, escritos por Raimundo del Río a partir de proyectos reales."
+    jsonLd={[
+        {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: "Notas de desarrollo",
+            url: `${Astro.url.origin}/blog`,
+            author: { "@type": "Person", name: "Raimundo del Río", url: MEDIUM_PROFILE },
+        },
+    ]}
 >
     <main class="pt-[72px]">
         <header class="section !pb-12">

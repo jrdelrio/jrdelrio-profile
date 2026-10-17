@@ -1,5 +1,6 @@
 import { projectTranslations } from "../data/projects";
 import { serviceTranslations } from "../data/services";
+import { faqTranslations } from "../data/faqs";
 
 // Diccionario de traducciones ES/EN. Claves referenciadas vía data-i18n / data-i18n-placeholder.
 // Idioma por defecto: es (el markup se escribe en español).
@@ -7,6 +8,8 @@ export const translations = {
     es: {
         ...projectTranslations("es"),
         ...serviceTranslations("es"),
+        ...faqTranslations("es"),
+        "faq.heading": "Preguntas frecuentes",
         // Navbar
         "nav.projects": "Proyectos",
         "nav.services": "Servicios",
@@ -54,6 +57,17 @@ export const translations = {
         "about.stack.back": "Backend y datos",
         "about.stack.ops": "Correo y operación",
         "about.stack.ai": "Desarrollo con IA",
+        "about.offline_label": "Fuera del código",
+        "about.offline_intro": "Además de programador, soy músico aficionado.",
+        "about.off.music": "Música",
+        "about.off.music.v": "Rock, sobre todo. Canto y toco guitarra y piano.",
+        "about.off.bike": "Bicicleta",
+        "about.off.bike.v": "Me muevo a todos lados en bici.",
+        "about.off.tennis": "Tenis",
+        "about.off.tennis.v": "Mi deporte para desconectarme.",
+        "about.off.chess": "Ajedrez",
+        "about.off.chess.v": "Apertura favorita: la española.",
+        "about.off.chess.n": "1.e4 e5 2.Cf3 Cc6 3.Ab5",
 
         // ServicesPreview
         "services.heading": "Todo lo que necesita tu web",
@@ -103,6 +117,8 @@ export const translations = {
     en: {
         ...projectTranslations("en"),
         ...serviceTranslations("en"),
+        ...faqTranslations("en"),
+        "faq.heading": "Frequently asked questions",
         // Navbar
         "nav.projects": "Projects",
         "nav.services": "Services",
@@ -150,6 +166,17 @@ export const translations = {
         "about.stack.back": "Backend & data",
         "about.stack.ops": "Email & operations",
         "about.stack.ai": "AI-assisted development",
+        "about.offline_label": "Off the keyboard",
+        "about.offline_intro": "Besides coding, I'm an amateur musician.",
+        "about.off.music": "Music",
+        "about.off.music.v": "Rock, mostly. I sing and play guitar and piano.",
+        "about.off.bike": "Cycling",
+        "about.off.bike.v": "I get everywhere by bike.",
+        "about.off.tennis": "Tennis",
+        "about.off.tennis.v": "My way to switch off.",
+        "about.off.chess": "Chess",
+        "about.off.chess.v": "Favorite opening: the Ruy López.",
+        "about.off.chess.n": "1.e4 e5 2.Nf3 Nc6 3.Bb5",
 
         // ServicesPreview
         "services.heading": "Everything your website needs",

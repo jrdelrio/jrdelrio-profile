@@ -4,15 +4,27 @@ import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import ServicesPreview from "../components/ServicesPreview.astro";
 import FeaturedProjects from "../components/FeaturedProjects.astro";
+import Faq from "../components/Faq.astro";
 import Contact from "../components/Contact.astro";
 ---
 
-<Layout active="home">
+<Layout
+    active="home"
+    jsonLd={[
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            name: "Raimundo del Río | Desarrollador web full-stack en Chile",
+            mainEntity: { "@id": `${Astro.site ? Astro.site.origin : ""}/#person` },
+        },
+    ]}
+>
     <main>
         <Hero />
         <About />
         <ServicesPreview />
         <FeaturedProjects />
+        <Faq />
         <Contact />
     </main>
 </Layout>

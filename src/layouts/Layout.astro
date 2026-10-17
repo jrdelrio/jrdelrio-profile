@@ -3,20 +3,54 @@ import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import ChatWidget from "../components/ChatWidget.tsx";
+import SEO from "../components/SEO.astro";
+import JsonLd from "../components/JsonLd.astro";
 
 interface Props {
     title?: string;
     description?: string;
     active?: "home" | "projects" | "services" | "blog";
+    image?: string;
+    noindex?: boolean;
+    /** JSON-LD adicional específico de la página. */
+    jsonLd?: Record<string, unknown>[];
 }
 
 const {
     title = "José Raimundo del Rio | Desarrollador Web Full-Stack",
     description = "Portafolio de José Raimundo del Rio, desarrollador web full-stack y fundador de Chilisites. Sitios y plataformas web a medida, e-commerce, SEO y marketing digital.",
     active = "home",
+    image,
+    noindex = false,
+    jsonLd = [],
 } = Astro.props;
 
-const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
+const origin = new URL("/", Astro.site ?? Astro.url).href.replace(/\/$/, "");
+const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${origin}/#person`,
+    name: "José Raimundo del Río Domeyko",
+    alternateName: "Raimundo del Río",
+    jobTitle: "Desarrollador web full-stack",
+    url: origin,
+    image: `${origin}/portrait.jpg`,
+    sameAs: [
+        "https://www.linkedin.com/in/jrdelriod/",
+        "https://github.com/jrdelrio",
+        "https://medium.com/@jrdelriodom",
+    ],
+    knowsAbout: ["Next.js", "Astro", "Sanity", "Django", "SEO técnico"],
+};
+const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${origin}/#website`,
+    name: "Raimundo del Río",
+    url: origin,
+    inLanguage: ["es", "en"],
+    publisher: { "@id": `${origin}/#person` },
+};
 ---
 
 <!doctype html>
@@ -26,27 +60,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <title>{title}</title>
-        <meta name="description" content={description} />
-
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:title" content={title} />
-        <meta
-            property="og:description"
-            content="Desarrollador web full-stack y fundador de Chilisites. Next.js, Astro, Sanity, Django."
-        />
-        <meta property="og:image" content="/linkedin.png" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta
-            name="twitter:description"
-            content="Desarrollador web full-stack y fundador de Chilisites."
-        />
-        <meta name="twitter:image" content="/linkedin.png" />
+        <SEO title={title} description={description} image={image} noindex={noindex} />
+        <JsonLd data={[personSchema, websiteSchema, ...jsonLd]} />
 
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="/favicons/favicon.png" />
@@ -99,18 +114,22 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
                             el.setAttribute("placeholder", dict[key]);
                     });
 
-                // El botón muestra el idioma AL QUE se cambiará
-                document.querySelectorAll("#lang-toggle").forEach((btn) => {
-                    btn.textContent = lang === "es" ? "EN" : "ES";
+                document.querySelectorAll(".lang-btn").forEach((btn) => {
+                    const isActive = btn.getAttribute("data-lang") === lang;
+                    btn.classList.toggle("border-accent", isActive);
+                    btn.classList.toggle("border-transparent", !isActive);
+                    btn.classList.toggle("font-medium", isActive);
+                    btn.setAttribute("aria-current", isActive ? "true" : "false");
                 });
             }
 
             applyLang(currentLang());
 
             document.addEventListener("click", (e) => {
-                const btn = e.target.closest("#lang-toggle");
+                const btn = e.target.closest(".lang-btn");
                 if (!btn) return;
-                const next = currentLang() === "es" ? "en" : "es";
+                const next = btn.getAttribute("data-lang");
+                if (next === currentLang()) return;
                 localStorage.setItem(STORAGE_KEY, next);
                 applyLang(next);
                 window.dispatchEvent(new CustomEvent("langchange", { detail: next }));

@@ -1,12 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { services } from "../data/services";
+
+const origin = Astro.site?.origin ?? Astro.url.origin;
 ---
 
 <Layout
     active="services"
-    title="Servicios | Raimundo del Río"
-    description="Diseño y desarrollo web a medida, contenido autogestionable con Sanity, dominio, correos y hosting, backend y marketing digital."
+    title="Desarrollo web a medida | Raimundo del Río"
+    description="Diseño y desarrollo web a medida, contenido autogestionable con Sanity, dominio, correos y hosting, backend y marketing digital con Chilisites."
+    jsonLd={services.map((s) => ({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: s.title.es,
+        description: s.desc.es,
+        provider: { "@id": `${origin}/#person` },
+        areaServed: "CL",
+        url: `${origin}/servicios`,
+    }))}
 >
     <main class="pt-[72px]">
         <header class="section !pb-12">
