@@ -13,9 +13,9 @@ const links = [
 ---
 
 <header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-paper rule-b">
-    <nav class="container-x h-[72px] flex items-center justify-between gap-6" aria-label="Principal">
+    <nav class="container-x h-18 flex items-center justify-between gap-6" aria-label="Principal">
         <a href="/" class="h4">
-            Raimundo del Río
+            Raimundo del Rio
         </a>
 
         <ul class="hidden md:flex items-center gap-9">
@@ -38,8 +38,24 @@ const links = [
             }
         </ul>
 
-        <div class="flex items-center gap-3">
-            <button id="lang-toggle" type="button" aria-label="Cambiar idioma" class="btn btn-ghost btn-sm">EN</button>
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-1.5" role="group" aria-label="Cambiar idioma">
+                <button
+                    type="button"
+                    data-lang="es"
+                    class="lang-btn py-1 border-b border-transparent text-ink text-sm transition-colors hover:text-ink"
+                >
+                    ES
+                </button>
+                <span class="text-ink/30 text-sm" aria-hidden="true">|</span>
+                <button
+                    type="button"
+                    data-lang="en"
+                    class="lang-btn py-1 border-b border-transparent text-ink text-sm transition-colors hover:text-ink"
+                >
+                    EN
+                </button>
+            </div>
             <a href="/#contact" data-i18n="nav.contact" class="hidden md:inline-flex btn btn-secondary btn-sm">Contacto</a>
             <button
                 id="menu-toggle"

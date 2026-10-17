@@ -105,14 +105,14 @@ export default function HeroToolkitModal() {
             <button
               type="button"
               onClick={(e) => open(tool, e.currentTarget)}
-              className="block cursor-pointer rounded-[4px]"
+              className="block cursor-pointer rounded-sm"
               aria-label={t.open(tool.name)}
               aria-haspopup="dialog"
             >
               <img
                 src={tool.icon}
                 alt=""
-                className="h-5 sm:h-6 md:h-8 w-auto grayscale opacity-80 transition duration-300 ease-out hover:grayscale-0 hover:opacity-100 hover:scale-110 motion-reduce:hover:scale-100"
+                className="h-9 sm:h-6 md:h-8 w-auto grayscale opacity-80 transition duration-300 ease-out hover:grayscale-0 hover:opacity-100 hover:scale-110 motion-reduce:hover:scale-100"
               />
             </button>
           </li>

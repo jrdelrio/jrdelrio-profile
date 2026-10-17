@@ -38,6 +38,20 @@ export const services: Service[] = [
         ],
     },
     {
+        key: "ecommerce",
+        icon: "shopping_cart",
+        title: { es: "E-commerce", en: "E-commerce" },
+        desc: {
+            es: "Tienda online a medida o conectada a Shopify, u otro servicio como Odoo, según cómo ya gestiones tu negocio.",
+            en: "Online store built from scratch or connected to Shopify, or another service like Odoo, depending on how you already run your business.",
+        },
+        includes: [
+            { es: "Tienda nativa o Shopify headless", en: "Native store or headless Shopify" },
+            { es: "Carrito y portal de pago", en: "Cart and checkout" },
+            { es: "Integración con Odoo u otros sistemas", en: "Integration with Odoo and other systems" },
+        ],
+    },
+    {
         key: "launch",
         icon: "dns",
         title: { es: "Dominio, correos y hosting", en: "Domain, email & hosting" },

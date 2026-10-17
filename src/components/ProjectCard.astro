@@ -1,24 +1,29 @@
 ---
 import { Image } from "astro:assets";
 import type { Project } from "../data/projects";
-import { projectImage } from "../data/project-images";
+import { projectLogo } from "../data/project-logos";
 
 interface Props {
     project: Project;
 }
 const { project: p } = Astro.props;
 const host = new URL(p.url).hostname.replace(/^www\./, "");
+const logo = projectLogo(p.slug);
 ---
 
 <a href={p.url} target="_blank" rel="noopener noreferrer" class="card group flex flex-col h-full overflow-hidden">
-    <div class="aspect-[16/10] overflow-hidden bg-surface">
-        <Image
-            src={projectImage(p.slug)}
-            alt={`Portada del sitio de ${p.name}`}
-            widths={[400, 800, 1200]}
-            sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"
-            class="w-full h-full object-cover object-top"
-        />
+    <div class="aspect-16/10 overflow-hidden bg-surface rule-b flex items-center justify-center p-8">
+        {logo ? (
+            <Image
+                src={logo}
+                alt={`Logo de ${p.name}`}
+                widths={[200, 400]}
+                sizes="(min-width: 1024px) 20vw, 40vw"
+                class="max-h-37.5 max-w-full w-auto h-auto object-contain"
+            />
+        ) : (
+            <span class="mono text-muted text-sm uppercase tracking-wide">{p.name}</span>
+        )}
     </div>
     <div class="flex flex-col flex-1 p-5 sm:p-6 md:p-9">
         <div class="flex items-start justify-between gap-3">

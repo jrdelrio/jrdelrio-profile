@@ -1,4 +1,3 @@
-
 type Localized = { es: string; en: string };
 
 export interface Project {
@@ -96,9 +95,42 @@ export const projects: Project[] = [
         featured: true,
     },
     {
+        slug: "bon-macaron",
+        name: "Bon Macaron",
+        url: "https://bon-macaron.vercel.app",
+        summary: {
+            es: "Alta pastelería de autor con tienda online.",
+            en: "Signature fine pastry with an online store.",
+        },
+        features: [
+            { es: "Tienda online con carrito", en: "Online store with cart" },
+            { es: "Portal de pago", en: "Checkout portal" },
+            { es: "Conectada a Shopify", en: "Connected to Shopify" },
+        ],
+        stack: ["Next.js", "Shopify headless"],
+        featured: true,
+        hideHost: true,
+    },
+    {
+        slug: "lids",
+        name: "LID Security",
+        url: "https://lids.cl",
+        summary: {
+            es: "Empresa de seguridad en Concepción: cámaras de vigilancia y guardias.",
+            en: "Security company in Concepción, Chile: surveillance cameras and security guards.",
+        },
+        features: [
+            { es: "Diseño propio", en: "Original design" },
+            { es: "Formulario de contacto", en: "Contact form" },
+            { es: "Página estática", en: "Static site" },
+        ],
+        stack: ["HTML", "SCSS", "JS"],
+        featured: false,
+    },
+    {
         slug: "andiamoo",
         name: "Andiamoo",
-        url: "https://andiamoo.cl",
+        url: "https://andiamoo.vercel.app",
         summary: {
             es: "Plataforma de itinerarios de viaje curados por expertos.",
             en: "Travel platform with expert-curated itineraries.",
@@ -130,7 +162,7 @@ export const projects: Project[] = [
     {
         slug: "332",
         name: "332 Arquitectos",
-        url: "https://332.cl",
+        url: "https://332-web.vercel.app",
         summary: {
             es: "Estudio de arquitectura eficiente y sustentable.",
             en: "Efficient, sustainable architecture studio.",
