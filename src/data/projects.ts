@@ -237,21 +237,21 @@ export const projects: Project[] = [
         stack: ["HTML", "Bootstrap", "JavaScript"],
         featured: false,
     },
-    {
-        slug: "domingoprieto",
-        name: "Dr. Domingo Prieto",
-        url: "https://www.jdomingoprieto.com",
-        summary: {
-            es: "Sitio profesional del Dr. Domingo Prieto, neurólogo y kinesiólogo.",
-            en: "Professional site of Dr. Domingo Prieto, neurologist and physiotherapist.",
-        },
-        features: [
-            { es: "Información y contacto", en: "Profile and contact" },
-            { es: "Material protegido con contraseña", en: "Password-protected materials" },
-        ],
-        stack: ["React"],
-        featured: false,
-    },
+    // {
+    //     slug: "domingoprieto",
+    //     name: "Dr. Domingo Prieto",
+    //     url: "https://www.jdomingoprieto.com",
+    //     summary: {
+    //         es: "Sitio profesional del Dr. Domingo Prieto, neurólogo y kinesiólogo.",
+    //         en: "Professional site of Dr. Domingo Prieto, neurologist and physiotherapist.",
+    //     },
+    //     features: [
+    //         { es: "Información y contacto", en: "Profile and contact" },
+    //         { es: "Material protegido con contraseña", en: "Password-protected materials" },
+    //     ],
+    //     stack: ["React"],
+    //     featured: false,
+    // },
     {
         slug: "fsr",
         name: "FSR Inspecciones",
