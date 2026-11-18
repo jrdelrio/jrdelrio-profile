@@ -27,5 +27,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), sitemap({ lastmod: new Date() })]
+  integrations: [react(), sitemap()]
 });

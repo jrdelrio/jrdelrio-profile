@@ -1,6 +1,8 @@
 import { projectTranslations } from "../data/projects";
 import { serviceTranslations } from "../data/services";
 import { faqTranslations } from "../data/faqs";
+import { serviceFaqTranslations } from "../data/service-faqs";
+import { processTranslations } from "../data/process";
 
 // Diccionario de traducciones ES/EN. Claves referenciadas vía data-i18n / data-i18n-placeholder.
 // Idioma por defecto: es (el markup se escribe en español).
@@ -10,6 +12,11 @@ export const translations = {
         ...serviceTranslations("es"),
         ...faqTranslations("es"),
         "faq.heading": "Preguntas frecuentes",
+        ...serviceFaqTranslations("es"),
+        "sfaq.heading": "Preguntas sobre el servicio",
+        ...processTranslations("es"),
+        "proc.heading": "Cómo trabajo",
+        "proc.optional": "Opcional",
         // Navbar
         "nav.projects": "Proyectos",
         "nav.services": "Servicios",
@@ -107,7 +114,7 @@ export const translations = {
         "proyectos.cta_btn": "Cotizar",
 
         // Página Servicios
-        "servicios.title": "Servicios de desarrollo web a medida",
+        "servicios.title": "Desarrollo web a medida para Chile y otros países",
         "servicios.intro": "Me encargo del proyecto completo: diseño, desarrollo, contenido, dominio, correos y hosting. Y si quieres crecer, con Chilisites sumamos SEO y campañas.",
         "sv.cta.heading": "¿Tienes un proyecto? Hablemos",
         "sv.cta.body": "Cuéntame qué necesitas y te preparo una cotización.",
@@ -119,6 +126,11 @@ export const translations = {
         ...serviceTranslations("en"),
         ...faqTranslations("en"),
         "faq.heading": "Frequently asked questions",
+        ...serviceFaqTranslations("en"),
+        "sfaq.heading": "Questions about the service",
+        ...processTranslations("en"),
+        "proc.heading": "How I work",
+        "proc.optional": "Optional",
         // Navbar
         "nav.projects": "Projects",
         "nav.services": "Services",
@@ -216,7 +228,7 @@ export const translations = {
         "proyectos.cta_btn": "Get a quote",
 
         // Services page
-        "servicios.title": "Custom web development services",
+        "servicios.title": "Custom web development for Chile and beyond",
         "servicios.intro": "I handle the whole project: design, development, content, domain, email and hosting. And if you want to grow, Chilisites adds SEO and ad campaigns.",
         "sv.cta.heading": "Got a project? Let's talk",
         "sv.cta.body": "Tell me what you need and I’ll put together a quote.",

@@ -1,14 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Faq from "../components/Faq.astro";
 import { services } from "../data/services";
+import { serviceFaqs } from "../data/service-faqs";
+import { processSteps } from "../data/process";
 
 const origin = Astro.site?.origin ?? Astro.url.origin;
 ---
 
 <Layout
     active="services"
-    title="Desarrollo web a medida | José Raimundo del Río"
-    description="Diseño y desarrollo web a medida, contenido autogestionable con Sanity, dominio, correos y hosting, backend y marketing digital con Chilisites."
+    title="Desarrollo web a medida en Chile y remoto | José Raimundo del Río"
+    description="Diseño y desarrollo web a medida para negocios en Chile y otros países: contenido autogestionable con Sanity, dominio, correos, hosting y marketing digital."
     jsonLd={[
         {
             "@context": "https://schema.org",
@@ -26,7 +29,7 @@ const origin = Astro.site?.origin ?? Astro.url.origin;
             serviceType: s.title.es,
             description: s.desc.es,
             provider: { "@id": `${origin}/#person` },
-            areaServed: { "@type": "Country", name: "Chile" },
+            areaServed: [{ "@type": "Country", name: "Chile" }, "Worldwide"],
             url: `${origin}/servicios#${s.key}`,
         })),
     ]}
@@ -35,7 +38,7 @@ const origin = Astro.site?.origin ?? Astro.url.origin;
         <header class="section !pb-12">
             <div class="container-x grid-12">
                 <div class="col-span-12 md:col-span-8">
-                    <h1 class="h1 mb-4" data-i18n="servicios.title">Servicios de desarrollo web a medida</h1>
+                    <h1 class="h1 mb-4" data-i18n="servicios.title">Desarrollo web a medida para Chile y otros países</h1>
                     <p class="text-muted max-w-[56ch]" data-i18n="servicios.intro">
                         Me encargo del proyecto completo: diseño, desarrollo, contenido, dominio, correos y hosting. Y si quieres crecer, con Chilisites sumamos SEO y campañas.
                     </p>
@@ -67,6 +70,30 @@ const origin = Astro.site?.origin ?? Astro.url.origin;
                 </p>
             </div>
         </section>
+
+        <section class="section" id="proceso">
+            <div class="container-x">
+                <h2 class="h2 mb-14" data-i18n="proc.heading">Cómo trabajo</h2>
+                <ol class="rule">
+                    {
+                        processSteps.map((step, i) => (
+                            <li class="grid-12 gap-y-2 py-8 rule-b">
+                                <h3 class="h4 col-span-12 md:col-span-4">
+                                    <span class="font-mono text-muted mr-3" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+                                    <span data-i18n={`proc.${step.key}.title`}>{step.title.es}</span>
+                                    {step.optional && (
+                                        <span class="chip ml-3 align-middle" data-i18n="proc.optional">Opcional</span>
+                                    )}
+                                </h3>
+                                <p class="text-muted max-w-[62ch] col-span-12 md:col-span-7 md:col-start-6" data-i18n={`proc.${step.key}.body`}>{step.body.es}</p>
+                            </li>
+                        ))
+                    }
+                </ol>
+            </div>
+        </section>
+
+        <Faq items={serviceFaqs} prefix="sfaq" heading="Preguntas sobre el servicio" id="preguntas" />
 
         <section class="band">
             <div class="container-x py-16 md:py-20 grid-12 gap-y-6 items-center">

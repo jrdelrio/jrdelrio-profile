@@ -72,8 +72,9 @@ const chilisitesSchema = {
     name: "Chilisites",
     url: "https://www.chilisites.com",
     description: "Agencia de diseño y desarrollo web y marketing digital en Chile.",
+    logo: `${origin}/brand/chilisites-logo.png`,
     founder: { "@id": `${origin}/#person` },
-    areaServed: { "@type": "Country", name: "Chile" },
+    areaServed: [{ "@type": "Country", name: "Chile" }, "Worldwide"],
 };
 const websiteSchema = {
     "@context": "https://schema.org",
@@ -89,14 +90,16 @@ const websiteSchema = {
 <!doctype html>
 <html lang="es">
     <head>
-        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N4BVQRFF"></script>
-        <script is:inline>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-        </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Google Tag Manager -->
+        <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N4BVQRFF');</script>
+        <!-- End Google Tag Manager -->
 
         <SEO title={title} description={description} image={image} noindex={noindex} type={type} />
         <JsonLd data={[personSchema, chilisitesSchema, websiteSchema, ...jsonLd]} />
@@ -123,6 +126,8 @@ const websiteSchema = {
 
     </head>
     <body class="overflow-x-hidden">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4BVQRFF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <Navbar active={active} />
         <slot />
         <Footer />
