@@ -16,7 +16,7 @@ const UI = {
         greeting:
             "¡Hola! Soy Raimundo, en versión IA. Pregúntame por mi stack, mis proyectos o cómo sacar adelante la web de tu negocio.",
         error:
-            "Ahora no puedo responder. Escríbeme a jrdelriodom@gmail.com y lo vemos.",
+            "Ahora no puedo responder. Escríbeme a raimundo@chilisites.com y lo vemos.",
     },
     en: {
         title: "Raimundo Bot",
@@ -26,7 +26,7 @@ const UI = {
         send: "Send",
         greeting:
             "Hi! I'm Raimundo, AI edition. Ask me about my stack, my projects, or how to get your business website off the ground.",
-        error: "I can't reply right now. Email me at jrdelriodom@gmail.com.",
+        error: "I can't reply right now. Email me at raimundo@chilisites.com.",
     },
 };
 

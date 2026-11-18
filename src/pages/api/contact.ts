@@ -3,8 +3,8 @@ import { Resend } from "resend";
 
 export const prerender = false;
 
-const TO = "jrdelriodom@gmail.com";
-// Hasta verificar un dominio propio en Resend, solo se puede enviar desde onboarding@resend.dev.
+const TO = import.meta.env.CONTACT_TO ?? "raimundo@chilisites.com";
+// En Vercel, CONTACT_FROM usa raimundo@chilisites.com (dominio verificado en Resend). Fallback para desarrollo local.
 const FROM = import.meta.env.CONTACT_FROM ?? "Portafolio <onboarding@resend.dev>";
 
 const LIMITS = { name: 100, email: 200, message: 5000 };
