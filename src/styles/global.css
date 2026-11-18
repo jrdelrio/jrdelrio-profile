@@ -309,6 +309,18 @@ h4 {
     animation: fade-up 0.6s var(--ease-out-expo) both;
     animation-delay: calc(var(--i, 0) * 0.1s + 0.05s);
 }
+/* El H1 es el elemento LCP: se anima solo el desplazamiento, sin partir invisible. */
+@keyframes rise-in {
+    from {
+        transform: translateY(16px);
+    }
+    to {
+        transform: none;
+    }
+}
+h1.hero-in {
+    animation-name: rise-in;
+}
 
 /* Modal del stack en el hero */
 @keyframes toolkit-modal-in {

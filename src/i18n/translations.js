@@ -16,14 +16,14 @@ export const translations = {
         "nav.about": "Sobre mí",
         "nav.contact": "Contacto",
         "nav.blog": "Blog",
-        "blog.heading": "Notas de desarrollo",
+        "blog.heading": "Blog de desarrollo web y SEO",
         "blog.intro": "Escribo sobre lo que aprendo construyendo sitios y productos: arquitectura, rendimiento, SEO y flujo de trabajo.",
         "blog.empty": "No pude cargar los artículos en este momento.",
         "blog.all": "Ver todos en Medium",
 
         // Hero
         "hero.badge": "Disponible para nuevos proyectos",
-        "hero.role": "Desarrollador web full-stack y fundador de Chilisites",
+        "hero.role": "Desarrollador web full-stack en Chile y fundador de Chilisites",
         "hero.desc": "Diseño y construyo sitios y plataformas con Next.js, Astro y Sanity, y me encargo de dejarlos funcionando: dominio, correos y hosting.",
         "hero.cta_projects": "Ver proyectos",
         "hero.cta_contact": "Hablemos",
@@ -100,14 +100,14 @@ export const translations = {
         // ChatWidget
 
         // Página Proyectos
-        "proyectos.title": "Proyectos",
+        "proyectos.title": "Proyectos de desarrollo web",
         "proyectos.intro": "Sitios reales, en producción. Para cada uno, lo que construí y con qué stack.",
         "proyectos.cta_heading": "¿Tienes un proyecto en mente?",
         "proyectos.cta_body": "Cuéntame qué necesitas y te preparo una cotización.",
         "proyectos.cta_btn": "Cotizar",
 
         // Página Servicios
-        "servicios.title": "Servicios",
+        "servicios.title": "Servicios de desarrollo web a medida",
         "servicios.intro": "Me encargo del proyecto completo: diseño, desarrollo, contenido, dominio, correos y hosting. Y si quieres crecer, con Chilisites sumamos SEO y campañas.",
         "sv.cta.heading": "¿Tienes un proyecto? Hablemos",
         "sv.cta.body": "Cuéntame qué necesitas y te preparo una cotización.",
@@ -125,14 +125,14 @@ export const translations = {
         "nav.about": "About",
         "nav.contact": "Contact",
         "nav.blog": "Blog",
-        "blog.heading": "Development notes",
+        "blog.heading": "Web development & SEO blog",
         "blog.intro": "I write about what I learn building websites and products: architecture, performance, SEO and workflow. Articles are in Spanish.",
         "blog.empty": "I couldn't load the articles right now.",
         "blog.all": "See all on Medium",
 
         // Hero
         "hero.badge": "Available for new projects",
-        "hero.role": "Full-stack web developer and founder of Chilisites",
+        "hero.role": "Full-stack web developer in Chile and founder of Chilisites",
         "hero.desc": "I design and build websites and platforms with Next.js, Astro and Sanity, and I take care of getting them live: domain, email and hosting.",
         "hero.cta_projects": "View projects",
         "hero.cta_contact": "Let's talk",
@@ -209,14 +209,14 @@ export const translations = {
         // ChatWidget
 
         // Projects page
-        "proyectos.title": "Projects",
+        "proyectos.title": "Web development projects",
         "proyectos.intro": "Real sites, live in production. For each one, what I built and with which stack.",
         "proyectos.cta_heading": "Have a project in mind?",
         "proyectos.cta_body": "Tell me what you need and I'll put together a quote.",
         "proyectos.cta_btn": "Get a quote",
 
         // Services page
-        "servicios.title": "Services",
+        "servicios.title": "Custom web development services",
         "servicios.intro": "I handle the whole project: design, development, content, domain, email and hosting. And if you want to grow, Chilisites adds SEO and ad campaigns.",
         "sv.cta.heading": "Got a project? Let's talk",
         "sv.cta.body": "Tell me what you need and I’ll put together a quote.",

@@ -10,12 +10,13 @@ import vercel from '@astrojs/vercel';
 import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
-// Dominio público: define SITE_URL cuando exista; mientras, se usa la URL de producción del hosting.
-const site =
-  process.env.SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : 'http://localhost:4321');
+// Dominio público. SITE_URL permite sobreescribirlo (por ejemplo, para pruebas locales).
+const site = process.env.SITE_URL ?? 'https://jrdelrio.dev';
+
+// Un build de producción con URL local o de ejemplo publicaría canonical, sitemap y robots falsos.
+if (process.env.VERCEL_ENV === 'production' && !site.startsWith('https://jrdelrio.dev')) {
+  throw new Error(`SITE_URL inválido para producción: ${site}`);
+}
 
 export default defineConfig({
   site,
@@ -26,5 +27,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [react(), sitemap()]
+  integrations: [react(), sitemap({ lastmod: new Date() })]
 });

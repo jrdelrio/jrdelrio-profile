@@ -13,9 +13,18 @@ const origin = Astro.site?.origin ?? Astro.url.origin;
     jsonLd={[
         {
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Inicio", item: `${origin}/` },
+                { "@type": "ListItem", position: 2, name: "Proyectos", item: `${origin}/proyectos` },
+            ],
+        },
+        {
+            "@context": "https://schema.org",
             "@type": "CollectionPage",
             name: "Proyectos web de Raimundo del Río",
             url: `${origin}/proyectos`,
+            author: { "@id": `${origin}/#person` },
             mainEntity: {
                 "@type": "ItemList",
                 itemListElement: projects.map((p, i) => ({
@@ -32,7 +41,7 @@ const origin = Astro.site?.origin ?? Astro.url.origin;
         <header class="section pb-12!">
             <div class="container-x grid-12">
                 <div class="col-span-12 md:col-span-8">
-                    <h1 class="h1 mb-4" data-i18n="proyectos.title">Proyectos</h1>
+                    <h1 class="h1 mb-4" data-i18n="proyectos.title">Proyectos de desarrollo web</h1>
                     <p class="text-muted max-w-[56ch]" data-i18n="proyectos.intro">
                         Sitios reales, en producción. Para cada uno, lo que construí y con qué stack.
                     </p>

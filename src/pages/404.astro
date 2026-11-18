@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="Página no encontrada | Raimundo del Río"
+    description="La página que buscas no existe o cambió de dirección. Revisa mis proyectos y servicios de desarrollo web."
+    noindex
+>
+    <main class="pt-[72px]">
+        <section class="section">
+            <div class="container-x max-w-[720px]">
+                <p class="label mb-4">404</p>
+                <h1 class="h1 mb-4">Esta página no existe</h1>
+                <p class="text-muted max-w-[56ch] mb-10">
+                    Puede que el enlace esté roto o que la página haya cambiado de dirección. Sigue por aquí:
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/" class="btn btn-primary btn-lg">Ir al inicio</a>
+                    <a href="/proyectos" class="btn btn-secondary btn-lg">Ver proyectos</a>
+                    <a href="/servicios" class="btn btn-secondary btn-lg">Ver servicios</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

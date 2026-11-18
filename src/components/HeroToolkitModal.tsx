@@ -8,22 +8,24 @@ interface Tool {
   id: string;
   name: string;
   icon: string;
+  /** Ancho a 32px de alto según el viewBox, para reservar espacio (CLS). */
+  w: number;
 }
 
 const tools: Tool[] = [
-  { id: "nextjs", name: "Next.js", icon: "/icons/stack/nextjs.svg" },
-  { id: "astro", name: "Astro", icon: "/icons/stack/astro.svg" },
-  { id: "sanity", name: "Sanity", icon: "/icons/stack/sanity.svg" },
-  { id: "django", name: "Django", icon: "/icons/stack/django.svg" },
-  { id: "postgresql", name: "PostgreSQL", icon: "/icons/stack/postgresql.svg" },
-  { id: "claude", name: "Claude", icon: "/icons/stack/claude.svg" },
-  { id: "docker", name: "Docker", icon: "/icons/stack/docker.svg" },
-  { id: "mongodb", name: "MongoDB", icon: "/icons/stack/mongodb.svg" },
-  { id: "flask", name: "Flask", icon: "/icons/stack/flask.svg" },
-  { id: "supabase", name: "Supabase", icon: "/icons/stack/supabase.svg" },
-  { id: "typescript", name: "TypeScript", icon: "/icons/stack/typescript.svg" },
-  { id: "resend", name: "Resend", icon: "/icons/stack/resend.svg" },
-  { id: "github", name: "GitHub", icon: "/icons/stack/github.svg" },
+  { id: "nextjs", name: "Next.js", icon: "/icons/stack/nextjs.svg", w: 32 },
+  { id: "astro", name: "Astro", icon: "/icons/stack/astro.svg", w: 25 },
+  { id: "sanity", name: "Sanity", icon: "/icons/stack/sanity.svg", w: 27 },
+  { id: "django", name: "Django", icon: "/icons/stack/django.svg", w: 32 },
+  { id: "postgresql", name: "PostgreSQL", icon: "/icons/stack/postgresql.svg", w: 31 },
+  { id: "claude", name: "Claude", icon: "/icons/stack/claude.svg", w: 51 },
+  { id: "docker", name: "Docker", icon: "/icons/stack/docker.svg", w: 44 },
+  { id: "mongodb", name: "MongoDB", icon: "/icons/stack/mongodb.svg", w: 15 },
+  { id: "flask", name: "Flask", icon: "/icons/stack/flask.svg", w: 36 },
+  { id: "supabase", name: "Supabase", icon: "/icons/stack/supabase.svg", w: 31 },
+  { id: "typescript", name: "TypeScript", icon: "/icons/stack/typescript.svg", w: 32 },
+  { id: "resend", name: "Resend", icon: "/icons/stack/resend.svg", w: 32 },
+  { id: "github", name: "GitHub", icon: "/icons/stack/github.svg", w: 32 },
 ];
 
 const CLOSE_MS = 220;
@@ -112,6 +114,8 @@ export default function HeroToolkitModal() {
               <img
                 src={tool.icon}
                 alt=""
+                width={tool.w}
+                height={32}
                 className="h-9 sm:h-6 md:h-8 w-auto grayscale opacity-80 transition duration-300 ease-out hover:grayscale-0 hover:opacity-100 hover:scale-110 motion-reduce:hover:scale-100"
               />
             </button>

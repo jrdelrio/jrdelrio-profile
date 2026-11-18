@@ -13,6 +13,7 @@ Astro.response.headers.set(
         : "public, s-maxage=300",
 );
 
+const origin = Astro.site?.origin ?? Astro.url.origin;
 const fmt = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "short", year: "numeric" });
 ---
 
@@ -20,13 +21,31 @@ const fmt = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "short", y
     active="blog"
     title="Blog de desarrollo web y SEO | Raimundo del Río"
     description="Artículos sobre desarrollo web, arquitectura frontend, rendimiento y SEO técnico, escritos por Raimundo del Río a partir de proyectos reales."
+    noindex={posts.length === 0}
     jsonLd={[
         {
             "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Inicio", item: `${origin}/` },
+                { "@type": "ListItem", position: 2, name: "Blog", item: `${origin}/blog` },
+            ],
+        },
+        {
+            "@context": "https://schema.org",
             "@type": "Blog",
-            name: "Notas de desarrollo",
-            url: `${Astro.url.origin}/blog`,
-            author: { "@type": "Person", name: "Raimundo del Río", url: MEDIUM_PROFILE },
+            name: "Blog de desarrollo web y SEO",
+            url: `${origin}/blog`,
+            inLanguage: "es",
+            author: { "@id": `${origin}/#person` },
+            blogPost: posts.map((post) => ({
+                "@type": "BlogPosting",
+                headline: post.title,
+                url: post.url,
+                datePublished: post.date.toISOString(),
+                ...(post.image ? { image: post.image } : {}),
+                author: { "@id": `${origin}/#person` },
+            })),
         },
     ]}
 >
@@ -34,7 +53,7 @@ const fmt = new Intl.DateTimeFormat("es-CL", { day: "numeric", month: "short", y
         <header class="section !pb-12">
             <div class="container-x grid-12">
                 <div class="col-span-12 md:col-span-8">
-                    <h1 class="h1 mb-4" data-i18n="blog.heading">Notas de desarrollo</h1>
+                    <h1 class="h1 mb-4" data-i18n="blog.heading">Blog de desarrollo web y SEO</h1>
                     <p class="text-muted max-w-[56ch]" data-i18n="blog.intro">
                         Escribo sobre lo que aprendo construyendo sitios y productos: arquitectura, rendimiento, SEO y flujo de trabajo.
                     </p>

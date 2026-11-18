@@ -37,7 +37,7 @@ A developer who owns the whole project end to end: original design, development,
 - **Never name Vercel** anywhere visitor-facing (site copy, chat). Hosting is described as managed hosting. AWS/Google Cloud only if a client asks; never offered up front.
 - Bilingual ES (default) / EN via client-side dictionary.
 - Projects and services are data files (`src/data/projects.ts`, `src/data/services.ts`); adding a project = one object + one screenshot.
-- Public domain not decided yet (`SITE_URL`).
+- Public domain: https://jrdelrio.dev (apex is canonical; www and *.vercel.app redirect to it).
 
 ## Brand Commitments
 

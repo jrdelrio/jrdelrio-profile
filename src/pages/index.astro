@@ -6,16 +6,23 @@ import ServicesPreview from "../components/ServicesPreview.astro";
 import FeaturedProjects from "../components/FeaturedProjects.astro";
 import Faq from "../components/Faq.astro";
 import Contact from "../components/Contact.astro";
+
+const origin = Astro.site?.origin ?? Astro.url.origin;
 ---
 
 <Layout
     active="home"
+    type="profile"
     jsonLd={[
         {
             "@context": "https://schema.org",
             "@type": "ProfilePage",
+            "@id": `${origin}/#profilepage`,
+            url: `${origin}/`,
             name: "Raimundo del Río | Desarrollador web full-stack en Chile",
-            mainEntity: { "@id": `${Astro.site ? Astro.site.origin : ""}/#person` },
+            inLanguage: "es",
+            isPartOf: { "@id": `${origin}/#website` },
+            mainEntity: { "@id": `${origin}/#person` },
         },
     ]}
 >

@@ -12,16 +12,18 @@ interface Props {
     active?: "home" | "projects" | "services" | "blog";
     image?: string;
     noindex?: boolean;
+    type?: "website" | "article" | "profile";
     /** JSON-LD adicional específico de la página. */
     jsonLd?: Record<string, unknown>[];
 }
 
 const {
-    title = "José Raimundo del Rio | Desarrollador Web Full-Stack",
-    description = "Portafolio de José Raimundo del Rio, desarrollador web full-stack y fundador de Chilisites. Sitios y plataformas web a medida, e-commerce, SEO y marketing digital.",
+    title = "Raimundo del Río | Desarrollador web full-stack en Chile",
+    description = "Raimundo del Río, desarrollador web full-stack en Chile y fundador de Chilisites. Sitios y plataformas a medida con Next.js y Astro, e-commerce y SEO.",
     active = "home",
     image,
     noindex = false,
+    type = "website",
     jsonLd = [],
 } = Astro.props;
 
@@ -31,16 +33,47 @@ const personSchema = {
     "@type": "Person",
     "@id": `${origin}/#person`,
     name: "José Raimundo del Río Domeyko",
-    alternateName: "Raimundo del Río",
+    alternateName: ["Raimundo del Río", "Raimundo del Rio", "José Raimundo del Río"],
     jobTitle: "Desarrollador web full-stack",
+    description: "Desarrollador web full-stack en Chile y fundador de Chilisites.",
     url: origin,
-    image: `${origin}/portrait.jpg`,
+    image: `${origin}/portrait-800.jpg`,
+    email: "mailto:jrdelriodom@gmail.com",
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Santiago",
+        addressCountry: "CL",
+    },
+    knowsLanguage: ["es", "en"],
+    worksFor: { "@id": `${origin}/#chilisites` },
     sameAs: [
         "https://www.linkedin.com/in/jrdelriod/",
         "https://github.com/jrdelrio",
         "https://medium.com/@jrdelriodom",
     ],
-    knowsAbout: ["Next.js", "Astro", "Sanity", "Django", "SEO técnico"],
+    knowsAbout: [
+        "Desarrollo web",
+        "Diseño web",
+        "Next.js",
+        "Astro",
+        "React",
+        "TypeScript",
+        "Sanity",
+        "Django",
+        "PostgreSQL",
+        "E-commerce",
+        "SEO técnico",
+    ],
+};
+const chilisitesSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${origin}/#chilisites`,
+    name: "Chilisites",
+    url: "https://www.chilisites.com",
+    description: "Agencia de diseño y desarrollo web y marketing digital en Chile.",
+    founder: { "@id": `${origin}/#person` },
+    areaServed: { "@type": "Country", name: "Chile" },
 };
 const websiteSchema = {
     "@context": "https://schema.org",
@@ -48,7 +81,7 @@ const websiteSchema = {
     "@id": `${origin}/#website`,
     name: "Raimundo del Río",
     url: origin,
-    inLanguage: ["es", "en"],
+    inLanguage: "es",
     publisher: { "@id": `${origin}/#person` },
 };
 ---
@@ -58,13 +91,15 @@ const websiteSchema = {
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <SEO title={title} description={description} image={image} noindex={noindex} />
-        <JsonLd data={[personSchema, websiteSchema, ...jsonLd]} />
+        <SEO title={title} description={description} image={image} noindex={noindex} type={type} />
+        <JsonLd data={[personSchema, chilisitesSchema, websiteSchema, ...jsonLd]} />
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="/favicons/favicon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicons/favicon-192.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="generator" content={Astro.generator} />
 
         <!-- Fonts -->
@@ -75,7 +110,7 @@ const websiteSchema = {
             rel="stylesheet"
         />
         <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0..1&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@300,0..1&icon_names=arrow_outward,chat_bubble,close,download,menu,north_east,send&display=block"
             rel="stylesheet"
         />
         <meta name="theme-color" content="#f6f1e7" />

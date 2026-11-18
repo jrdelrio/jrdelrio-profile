@@ -3,6 +3,9 @@ interface Props {
     title: string;
     description: string;
     image?: string;
+    imageAlt?: string;
+    imageWidth?: number;
+    imageHeight?: number;
     noindex?: boolean;
     type?: "website" | "article" | "profile";
 }
@@ -10,7 +13,10 @@ interface Props {
 const {
     title,
     description,
-    image = "/linkedin.png",
+    image = "/og-default.jpg",
+    imageAlt = "Raimundo del Río, desarrollador web full-stack en Chile",
+    imageWidth = 1200,
+    imageHeight = 630,
     noindex = false,
     type = "website",
 } = Astro.props;
@@ -23,19 +29,31 @@ const siteName = "Raimundo del Río";
 
 <title>{title}</title>
 <meta name="description" content={description} />
+<meta name="author" content="Raimundo del Río" />
 <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"} />
 <link rel="canonical" href={canonical} />
 
 <meta property="og:type" content={type} />
 <meta property="og:site_name" content={siteName} />
 <meta property="og:locale" content="es_CL" />
-<meta property="og:locale:alternate" content="en_US" />
 <meta property="og:url" content={canonical} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content={String(imageWidth)} />
+<meta property="og:image:height" content={String(imageHeight)} />
+<meta property="og:image:alt" content={imageAlt} />
+{
+    type === "profile" && (
+        <>
+            <meta property="profile:first_name" content="Raimundo" />
+            <meta property="profile:last_name" content="del Río" />
+        </>
+    )
+}
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={imageAlt} />
