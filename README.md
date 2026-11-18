@@ -1,4 +1,4 @@
-# 👨‍💻 José Raimundo del Rio — Full Stack Web Developer
+# 👨‍💻 José Raimundo del Río — Full Stack Web Developer
 
 Soy un desarrollador web full-stack con más de **5 años de experiencia** y fundador de [Chilisites](https://chilisites.com), una agencia digital que ayuda a pequeñas empresas a crecer online mediante sitios web modernos, SEO y plataformas personalizadas.
 
@@ -106,4 +106,4 @@ Puedes descargar mi CV directamente:
 
 ---
 
-&copy; 2025 José Raimundo del Rio. Todos los derechos reservados.
+&copy; 2025 José Raimundo del Río. Todos los derechos reservados.

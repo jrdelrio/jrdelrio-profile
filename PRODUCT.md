@@ -16,7 +16,7 @@ Both must leave convinced of professionalism and competence.
 
 ## Product Purpose
 
-Personal portfolio of Raimundo del Río, full-stack web developer and founder of Chilisites. It tells his story, shows real shipped work with the stack behind each project, and converts visitors into job conversations or client quotes (contact form, email, WhatsApp, AI chat).
+Personal portfolio of José Raimundo del Río, full-stack web developer and founder of Chilisites. It tells his story, shows real shipped work with the stack behind each project, and converts visitors into job conversations or client quotes (contact form, email, WhatsApp, AI chat).
 
 ## Positioning
 
@@ -41,7 +41,7 @@ A developer who owns the whole project end to end: original design, development,
 
 ## Brand Commitments
 
-- Name: Raimundo del Río. Company: Chilisites.
+- Name: José Raimundo del Río. Company: Chilisites.
 - Voice: close but serious; professional, technical, intelligent and friendly. Never jokey.
 - Visual design is open to iteration; no binding palette or typography.
 

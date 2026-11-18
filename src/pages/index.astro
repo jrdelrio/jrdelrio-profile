@@ -12,14 +12,13 @@ const origin = Astro.site?.origin ?? Astro.url.origin;
 
 <Layout
     active="home"
-    type="profile"
     jsonLd={[
         {
             "@context": "https://schema.org",
             "@type": "ProfilePage",
             "@id": `${origin}/#profilepage`,
             url: `${origin}/`,
-            name: "Raimundo del Río | Desarrollador web full-stack en Chile",
+            name: "José Raimundo del Río | Desarrollador web full-stack en Chile",
             inLanguage: "es",
             isPartOf: { "@id": `${origin}/#website` },
             mainEntity: { "@id": `${origin}/#person` },

@@ -12,14 +12,14 @@ interface Props {
     active?: "home" | "projects" | "services" | "blog";
     image?: string;
     noindex?: boolean;
-    type?: "website" | "article" | "profile";
+    type?: "website" | "article";
     /** JSON-LD adicional específico de la página. */
     jsonLd?: Record<string, unknown>[];
 }
 
 const {
-    title = "Raimundo del Río | Desarrollador web full-stack en Chile",
-    description = "Raimundo del Río, desarrollador web full-stack en Chile y fundador de Chilisites. Sitios y plataformas a medida con Next.js y Astro, e-commerce y SEO.",
+    title = "José Raimundo del Río | Desarrollador web full-stack en Chile",
+    description = "José Raimundo del Río, desarrollador web full-stack en Chile y fundador de Chilisites. Sitios y plataformas a medida con Next.js y Astro, e-commerce y SEO.",
     active = "home",
     image,
     noindex = false,
@@ -33,7 +33,7 @@ const personSchema = {
     "@type": "Person",
     "@id": `${origin}/#person`,
     name: "José Raimundo del Río Domeyko",
-    alternateName: ["Raimundo del Río", "Raimundo del Rio", "José Raimundo del Río"],
+    alternateName: ["José Raimundo del Río", "Raimundo del Río", "José Raimundo del Rio", "Raimundo del Rio"],
     jobTitle: "Desarrollador web full-stack",
     description: "Desarrollador web full-stack en Chile y fundador de Chilisites.",
     url: origin,
@@ -79,7 +79,7 @@ const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${origin}/#website`,
-    name: "Raimundo del Río",
+    name: "José Raimundo del Río",
     url: origin,
     inLanguage: "es",
     publisher: { "@id": `${origin}/#person` },

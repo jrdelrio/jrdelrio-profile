@@ -7,14 +7,14 @@ interface Props {
     imageWidth?: number;
     imageHeight?: number;
     noindex?: boolean;
-    type?: "website" | "article" | "profile";
+    type?: "website" | "article";
 }
 
 const {
     title,
     description,
-    image = "/og-default.jpg",
-    imageAlt = "Raimundo del Río, desarrollador web full-stack en Chile",
+    image = "/og-jose-raimundo-del-rio.jpg",
+    imageAlt = "José Raimundo del Río, desarrollador web full-stack en Chile",
     imageWidth = 1200,
     imageHeight = 630,
     noindex = false,
@@ -24,12 +24,12 @@ const {
 const base = Astro.site ?? Astro.url;
 const canonical = new URL(Astro.url.pathname, base).href;
 const ogImage = new URL(image, base).href;
-const siteName = "Raimundo del Río";
+const siteName = "José Raimundo del Río";
 ---
 
 <title>{title}</title>
 <meta name="description" content={description} />
-<meta name="author" content="Raimundo del Río" />
+<meta name="author" content="José Raimundo del Río" />
 <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"} />
 <link rel="canonical" href={canonical} />
 
@@ -43,14 +43,6 @@ const siteName = "Raimundo del Río";
 <meta property="og:image:width" content={String(imageWidth)} />
 <meta property="og:image:height" content={String(imageHeight)} />
 <meta property="og:image:alt" content={imageAlt} />
-{
-    type === "profile" && (
-        <>
-            <meta property="profile:first_name" content="Raimundo" />
-            <meta property="profile:last_name" content="del Río" />
-        </>
-    )
-}
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />

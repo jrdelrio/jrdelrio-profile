@@ -7,7 +7,7 @@ export const GET: APIRoute = ({ site, url }) => {
     const abs = (path: string) => new URL(path, site ?? url).href;
 
     const body = [
-        "# Raimundo del Río",
+        "# José Raimundo del Río",
         "",
         "> Desarrollador web full-stack en Chile y fundador de Chilisites. Diseña y construye sitios y plataformas web a medida con Next.js, Astro y Sanity, y se encarga de dominio, correos y hosting.",
         "",
